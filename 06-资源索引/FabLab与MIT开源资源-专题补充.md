@@ -102,7 +102,7 @@ Fab 生态的设备控制/CAM 层全部开源，由 MIT Center for Bits and Atom
 | **UCLA DMA Fab Lab** | Universal ILS12.150D + PLS6.60 | Ultimaker 3 ×2 | Shopbot PRS Alpha + Desktop | Bantam PCB 铣 + Siglent 电源 | **10 房间分区**（机器间/电子/工具间/激光室/喷漆室/除尘室/存储室）——可参考到「设备摆放」主题 |
 
 **用法**：
-1. 与广东科学中心需求表（`设备清单与选型.md`）逐项对照，验证参数是否合理
+1. 与科普场馆需求表（`设备清单与选型.md`）逐项对照，验证参数是否合理
 2. 选一个体量接近的实例（如 Reykjavik 学院节点 或 Vancouver 社区型）作为完整配置基准
 3. UCLA 的分区清单可平移进「设备摆放与布局」规范
 
@@ -161,7 +161,7 @@ chmod +x "创客空间知识库/06-资源索引/存档/fetch-fab-inventory.sh"
 - `inv.json` —— 机器可读（后续可导入知识库自动化处理）
 - `inv.xlsx` —— 表格版（适合直接分发核对）
 
-> 抓取后建议：把 inv.toml 与《设备清单与选型.md》逐类对照，标注哪些条目适配广东科学中心需求。
+> 抓取后建议：把 inv.toml 与《设备清单与选型.md》逐类对照，标注哪些条目适配科普场馆需求。
 
 ### 3. 离线替代：Fab Foundation 最低设备标准（文字版）
 
