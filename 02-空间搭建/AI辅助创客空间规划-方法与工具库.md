@@ -85,14 +85,21 @@ tags: [AI规划, 工具库, 七步工作流, 提示词, Snaptrude]
 | **TestFit** | 生成式场地/建筑布局可行性，实时生成（分区/停车/单元数） | ["https://archeyes.com/best-ai-tools-for-architects-in-2025-a-comprehensive-guide/"] |
 | **Hypar** | 参数化生成式设计平台，有免费层 | ["https://illustrarch.com/interior-design/floor-plans/74667-ai-floor-plan-generator.html"] |
 | **Archilabs** | AI-first 参数化 CAD，面向实验室台柜与布局 | ["https://archilabs.ai/posts/ai-cad-for-lab-casework-and-laboratory-layout-drawings"] |
+| **Autodesk Forma**（前 Spacemaker AI）| AECO 首个端到端 AI 原生平台：实时日照/风/噪声/隐含碳分析；输入建筑类型+结构材料→秒级生成完整室内布局；~$185/月 | [AU2025 官方](https://www.autodesk.com/blogs/construction/au-2025-top-autodesk-construction-announcements/)；[illustrarch 评测](https://illustrarch.com/articles/design-softwares/73363-autodesk-forma-review.html) |
+| **Finch3D** | AI 生成设计 copilot：把设计系统编码进生成流程，实时数据探索方案权衡 | [finch3d.com](https://www.finch3d.com/)；[PAACADEMY](https://paacademy.com/blog/top-ai-tools-architectural-planning) |
+| **Architechures** | 生成式布局优化（住宅），多方案迭代，€41/月 | [MeltFlex 定价对比](https://www.meltflexai.com/blog/best-ai-space-planning-tools-architects) |
+
+> 完整全球工具生态图谱（含采用率数据、施工深化 AI、学术前沿）见 [../06-资源索引/AI辅助建筑规划设计-全球调研与知识库适配.md](../06-资源索引/AI辅助建筑规划设计-全球调研与知识库适配.md)
 
 ### 3.4 中文垂直工具（教育/实验室场景友好）
 
 | 工具 | 核心能力 | 来源 |
 |------|---------|------|
-| **酷家乐 AI 布局** | 教育空间/办公室：输入房间名、面积、人数、功能区需求→1-2 分钟生成 3-5 方案；实验室专项模块（台面/试剂架/水槽联动） | ["https://b.kujiale.com/article-detail/3FO4K4WC89FQ"] |
-| **暗壳 AI Agent2.0** | 空间设计垂类智能体：深度理解模糊需求、自主推演设计逻辑、调度工作流 | ["https://www.icloudnews.net/a/115304.html"] |
+| **酷家乐 AI 布局** | 教育空间/办公室：输入房间名、面积、人数、功能区需求→1-2 分钟生成 3-5 方案；实验室专项模块（台面/试剂架/水槽联动）；AI 户型识别、3 小时全案设计 | ["https://b.kujiale.com/article-detail/3FO4K4WC89FQ"] |
+| **暗壳 AI Agent2.0** | 空间设计垂类智能体：深度理解模糊需求、自主推演设计逻辑、调度工作流；2025 获近千万融资 | ["https://www.icloudnews.net/a/115304.html"]；[融资报道](https://m.aitntnews.com/newDetail.html?newId=18702) |
 | **建筑学长 AI** | 画布模式：旧厂房改造、规划色块法、局部调整 | ["https://www.iesdouyin.com/share/video/7668250273218956595"] |
+| **小库科技 XKool** | AI 设计引擎："数-模-规统一"（设计即建模即合规），规划/户型/彩总智能生成 | [xkool.ai](https://www.xkool.ai/zh/XkoolDesignCloud) |
+| **ArchiNeur**（上海建筑设计研究院）| 建筑师一站式 AI 创意生成平台；上海"模塑申城"住建 AI 十佳案例 | [澎湃新闻](https://m.thepaper.cn/newsDetail_forward_32042003) |
 
 ### 3.5 开源/可自建
 
