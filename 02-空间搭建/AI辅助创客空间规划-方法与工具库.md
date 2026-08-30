@@ -90,6 +90,7 @@ tags: [AI规划, 工具库, 七步工作流, 提示词, Snaptrude]
 | **Architechures** | 生成式布局优化（住宅），多方案迭代，€41/月 | [MeltFlex 定价对比](https://www.meltflexai.com/blog/best-ai-space-planning-tools-architects) |
 
 > 完整全球工具生态图谱（含采用率数据、施工深化 AI、学术前沿）见 [../06-资源索引/AI辅助建筑规划设计-全球调研与知识库适配.md](../06-资源索引/AI辅助建筑规划设计-全球调研与知识库适配.md)
+> 动线（circulation）量化评估与验证的专门方法与工具（空间句法 depthmapX / ABM 人流模拟 Desire Paths·JuPedSim / 疏散 T.R.A.G.I.C 等）见 [../06-资源索引/AI辅助动线规划-方法工具与开源资源调研.md](../06-资源索引/AI辅助动线规划-方法工具与开源资源调研.md)
 
 ### 3.4 中文垂直工具（教育/实验室场景友好）
 
