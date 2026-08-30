@@ -1,3 +1,12 @@
+---
+title: "Fab Lab 建设标准与流程"
+type: 方法论
+scope: 通用
+source: "Fab Foundation官方指南等"
+date: 2026-08
+tags: [Fab Lab, 建设标准, 四大准入, 九步流程, 预算]
+---
+
 # Fab Lab 建设标准与流程
 
 > 来源：Fab Foundation "Getting Started" 官方指南 + 亚利桑那大学 4-H Fab Lab Guide + Make Your Way 实践指南

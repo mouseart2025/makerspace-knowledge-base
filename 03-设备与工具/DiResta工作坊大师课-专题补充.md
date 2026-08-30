@@ -1,3 +1,12 @@
+---
+title: "DiResta 工作坊大师课——工具哲学与工艺速查（专题补充）"
+type: 专题补充
+scope: 通用
+source: "书《Workshop Mastery》Jimmy DiResta 2016"
+date: 2026-08
+tags: [DiResta, 工具哲学, 工艺速查, 二手设备]
+---
+
 # DiResta 工作坊大师课——工具哲学与工艺速查（专题补充）
 
 > 出处：《Workshop Mastery with Jimmy DiResta》Jimmy DiResta & John Baichtal，Maker Media 2016

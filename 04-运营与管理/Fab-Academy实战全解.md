@@ -1,3 +1,12 @@
+---
+title: "Fab Academy 实战全解"
+type: 方法论
+scope: 通用
+source: "2025届柴火学员一手经验"
+date: 2026-08
+tags: [Fab Academy, 实战, 节点运营, 学费, 导师机制]
+---
+
 # Fab Academy 实战全解
 
 > 一个 Fab Lab 节点如何运营这门"全球分布式大学"：报名、费用、导师、评审、毕业的完整一手细节

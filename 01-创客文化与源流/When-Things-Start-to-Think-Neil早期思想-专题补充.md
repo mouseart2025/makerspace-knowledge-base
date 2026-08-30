@@ -1,3 +1,12 @@
+---
+title: "When Things Start to Think：Neil 早期思想专题补充"
+type: 专题补充
+scope: 通用
+source: "书《When Things Start to Think》1999"
+date: 2026-08
+tags: [Neil Gershenfeld, 早期思想, 比特与原子, 教育]
+---
+
 # When Things Start to Think：Neil 早期思想专题补充
 
 > 《When Things Start to Think》（Neil Gershenfeld, Henry Holt, 1999，213 页）——Fab 运动诞生前夜的"前传"：Neil 从物理学家转向"比特与原子"交叉领域时，对计算、界面、教育、科研组织的全景思考

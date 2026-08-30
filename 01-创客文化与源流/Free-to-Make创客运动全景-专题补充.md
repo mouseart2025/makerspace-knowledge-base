@@ -1,3 +1,12 @@
+---
+title: "《自由创造》（Free to Make）专题补充——Dale Dougherty 的创客运动全景叙事"
+type: 专题补充
+scope: 通用
+source: "书《Free to Make》Dale Dougherty"
+date: 2026-08
+tags: [Free to Make, 创客运动, 心态, 教育, 深圳柴火]
+---
+
 # 《自由创造》（Free to Make）专题补充——Dale Dougherty 的创客运动全景叙事
 
 > **一句话核心**：创客运动不是关于机器人或 3D 打印机，"它实际上是关于自由——我们用双手创造我们生活的世界的自由"（Jay Silver）。本书是 Make: 杂志创始人 Dale Dougherty 的运动总结陈词，覆盖源流、人物、心态、教育、制造与公平六个层面，其中含深圳柴火专节，是柴火叙事与课程设计的直接思想资源。

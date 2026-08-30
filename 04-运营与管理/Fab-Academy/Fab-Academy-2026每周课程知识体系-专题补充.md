@@ -1,3 +1,12 @@
+---
+title: "Fab Academy 2026 每周课程知识体系 · 专题补充"
+type: 专题补充
+scope: 通用
+source: "Fab Academy官网2026"
+date: 2026-08
+tags: [Fab Academy, 2026, 每周课程, 知识体系]
+---
+
 # Fab Academy 2026 每周课程知识体系 · 专题补充
 
 > 逐周深挖 19 个课程内容页（fabacademy.org/2026/classes/*/index.html）的完整知识体系：核心概念、知识要点、工具链、作业要求
