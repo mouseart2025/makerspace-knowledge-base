@@ -1,3 +1,12 @@
+---
+title: "全球 Fab Lab / Makerspace 案例研究"
+type: 案例
+scope: 通用
+source: "Fab Foundation/Nature/CENTRINNO等"
+date: 2026-08
+tags: [Fab Lab, 全球案例, 南非, 荷兰, 肯尼亚, FAB25]
+---
+
 # 全球 Fab Lab / Makerspace 案例研究
 
 > 调研时间：2026-08 ｜ 来源：Fab Foundation / Nature / CENTRINNO / 汉堡 Fab City / 各实验室官网

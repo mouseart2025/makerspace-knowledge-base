@@ -1,3 +1,12 @@
+---
+title: "Maker Pro：创客职业化之路 —— 专题补充"
+type: 专题补充
+scope: 通用
+source: "书《Maker Pro》John Baichtal"
+date: 2026-08
+tags: [Maker Pro, 职业化, 谋生路径, 商业模式]
+---
+
 # Maker Pro：创客职业化之路 —— 专题补充
 
 > 源书：《Maker Pro: 18 Makers on How They Made the Grade》，John Baichtal 编，Maker Media 2014（本地 PDF，162 页 / 16 章 + 3 篇访谈）

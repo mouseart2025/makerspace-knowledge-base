@@ -1,3 +1,12 @@
+---
+title: "Zero to Maker 创客成长之路——新创客叙事与空间方法论（专题补充）"
+type: 专题补充
+scope: 通用
+source: "书《Zero to Maker》David Lang"
+date: 2026-08
+tags: [Zero to Maker, 新创客, 成长路径, 空间方法论]
+---
+
 # Zero to Maker 创客成长之路——新创客叙事与空间方法论（专题补充）
 
 > 出处：《Zero to Maker: Learn (Just Enough) to Make (Just About) Anything》David Lang，Maker Media 2013（本地 PDF，217 页）

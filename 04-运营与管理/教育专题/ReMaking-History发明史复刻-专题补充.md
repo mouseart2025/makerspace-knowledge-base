@@ -1,3 +1,12 @@
+---
+title: "ReMaking History 三卷：发明史复刻课程线（专题补充）"
+type: 专题补充
+scope: 通用
+source: "书《ReMaking History》William Gurstelle 2016-17"
+date: 2026-08
+tags: [发明史, 复刻, 课程线, 三合一学习法]
+---
+
 # ReMaking History 三卷：发明史复刻课程线（专题补充）
 
 > 源书：《ReMaking History》V1 Early Makers / V2 Industrial Revolutionaries / V3 Makers of the Modern World，William Gurstelle 著，Maker Media 2016-2017（146/178/194 页，三卷合计 31 章，本地 PDF 备查于 参考书/）

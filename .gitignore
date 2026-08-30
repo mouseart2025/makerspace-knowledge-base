@@ -19,6 +19,7 @@ _check_links.py
 _deidentify.py
 _linkcheck.py
 _scitech.py
+_add_frontmatter.py
 
 # 存档下载（脚本抓取的大文件）
 06-资源索引/存档/inv.*

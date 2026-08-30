@@ -1,3 +1,12 @@
+---
+title: "Fab Academy 2026 课程日程 · 专题补充"
+type: 专题补充
+scope: 通用
+source: "Fab Academy官网2026"
+date: 2026-08
+tags: [Fab Academy, 2026, 课程日程, 模块递进]
+---
+
 # Fab Academy 2026 课程日程 · 专题补充
 
 > 19 教学周完整日历、模块递进逻辑、Recitation 双轨体系与时间换算

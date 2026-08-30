@@ -1,3 +1,12 @@
+---
+title: "Fab 全球生态体系"
+type: 方法论
+scope: 通用
+source: "调研综合"
+date: 2026-08
+tags: [Fab Lab, Fab Academy, Fabricademy, Fab City, Fab-in-a-box]
+---
+
 # Fab 全球生态体系
 
 > 从 Fab Lab 到 Fab City：一个"造物宗教体系"的完整版图

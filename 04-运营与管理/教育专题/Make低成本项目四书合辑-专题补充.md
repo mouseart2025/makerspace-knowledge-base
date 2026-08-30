@@ -1,3 +1,12 @@
+---
+title: "Make 低成本项目四书合辑专题补充"
+type: 专题补充
+scope: 通用
+source: "Maker Media 四书合辑"
+date: 2026-08
+tags: [低成本项目, 任务卡, 带娃5×5, 课程设计]
+---
+
 # Make 低成本项目四书合辑专题补充
 
 > 批次 D 四本合并内化（均为 Maker Media 出版、本地 PDF，全文/框架通读）：

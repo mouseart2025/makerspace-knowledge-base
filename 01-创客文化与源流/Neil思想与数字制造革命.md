@@ -1,3 +1,12 @@
+---
+title: "Neil Gershenfeld 思想与数字制造革命"
+type: 方法论
+scope: 通用
+source: "书《FAB》《Designing Reality》"
+date: 2026-08
+tags: [Neil Gershenfeld, 数字制造, Fab运动, 设计现实]
+---
+
 # Neil Gershenfeld 思想与数字制造革命
 
 > 从《FAB》到《Designing Reality》：理解 Fab 运动的底层世界观

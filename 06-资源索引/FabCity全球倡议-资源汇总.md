@@ -1,3 +1,12 @@
+---
+title: "Fab City 全球倡议资源汇总（专题补充）"
+type: 资源索引
+scope: 通用
+source: "Fab City官网调研"
+date: 2026-08
+tags: [Fab City, Full Stack, 开源软件, 深圳节点]
+---
+
 # Fab City 全球倡议资源汇总（专题补充）
 
 > 定位：补充《Fab全球生态体系.md》第五节「Fab City」的**可落地操作资源层**——官网入口、方法论框架、开源软件、数据平台、活动项目、中国相关。

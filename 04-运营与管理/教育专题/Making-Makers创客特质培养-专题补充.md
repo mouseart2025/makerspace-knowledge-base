@@ -1,3 +1,12 @@
+---
+title: "Making Makers：创客特质培养（专题补充）"
+type: 专题补充
+scope: 通用
+source: "书《Making Makers》AnnMarie Thomas 2014"
+date: 2026-08
+tags: [创客特质, 培养, 访谈, 导师准则]
+---
+
 # Making Makers：创客特质培养（专题补充）
 
 > 源书：《Making Makers》AnnMarie Thomas 著，Maker Media 2014（162 页 10 章，本地 PDF 备查于 参考书/）

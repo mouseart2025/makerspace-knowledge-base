@@ -1,3 +1,12 @@
+---
+title: "Make Space：空间设计语法（专题补充）"
+type: 专题补充
+scope: 通用
+source: "书《Make Space》Stanford d.school 2012"
+date: 2026-08
+tags: [Make Space, 空间设计语法, d.school, 家具]
+---
+
 # Make Space：空间设计语法（专题补充）
 
 > 书目：Scott Doorley & Scott Witthoft, **《Make Space: How to Set the Stage for Creative Collaboration》**, Wiley / Stanford d.school, 2012（本地 PDF，275 页）

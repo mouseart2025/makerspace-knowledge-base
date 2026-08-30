@@ -1,3 +1,12 @@
+---
+title: "《To Understand is to Invent》皮亚杰教育原著专题补充"
+type: 专题补充
+scope: 通用
+source: "书《To Understand is to Invent》Piaget 1973"
+date: 2026-08
+tags: [皮亚杰, 建构主义, 理解即发明, 教育哲学]
+---
+
 # 《To Understand is to Invent》皮亚杰教育原著专题补充
 
 > Jean Piaget, *To Understand is to Invent: The Future of Education*, Viking Compass 1973（本地 PDF，154 页，全文通读）

@@ -1,3 +1,12 @@
+---
+title: "GitHub开源AI平面图生成工具调研"
+type: 资源索引
+scope: 通用
+source: "GitHub AI平面图工具调研"
+date: 2026-08
+tags: [AI平面图, 开源工具, Buildify, LLM+JSON, 调研]
+---
+
 # GitHub开源AI平面图生成工具调研
 
 > 深度调研 GitHub 上 AI 平面图/空间布局生成的开源项目，评估技术路线可靠性，对标某职业院校创客空间项目给出可行路径
