@@ -165,6 +165,7 @@ tags: [知识库总览, 导航, 参与共创, CC BY 4.0]
     ├── 资源总索引.md                 ← 官方组织 / 课程 / 书籍 / 工具平台 / 本地文档 全链接
     ├── AI应用现状全景-创客空间各领域调研.md ← 【新增】AI 在知识库 6 大领域应用现状：空间规划/设备预测性维护/教育/智慧运营/安全监控/产业案例（智能体·具身·低空·科普），含数据速览表
     ├── AI辅助建筑规划设计-全球调研与知识库适配.md ← 【新增】全球 AI 建筑设计调研：采用率数据（RIBA 59%/AIA 33%）、工具生态图谱（Forma/TestFit/Finch/小库/ArchiNeur）、施工深化 AI、学术前沿（FloorPlan-LLaMa/DiffPlanner）、对知识库 6 大可迁移点
+    ├── AI辅助动线规划-方法工具与开源资源调研.md ← 【新增】动线规划三大方法（空间句法/ABM人流模拟/LLM寻路）+ 12 个开源仓库（depthmapX/Desire Paths/JuPedSim/T.R.A.G.I.C）+ 商业工具（MassMotion/Pathfinder/AnyLogic）+ 7 篇文献 + 零成本落地工作流
     ├── 工具设备与摆放管理-资源汇总.md ← 设备摆放 / 工具组织 / 设备管理软件 / 维保周期 40 项外部资源
     ├── FabLab与MIT开源资源-专题补充.md ← Fab 官方清单入口、MIT 开源 CAM 工具链、Fab Manager、Fab-in-a-Box、真实实验室清单模板、CBA 官网资源导航（研究方向/课程/四尺度设备）
     ├── FabCity全球倡议-资源汇总.md    ← Full Stack 七层框架、Fab City OS 开源全家桶、Summit/Challenge、深圳节点实操
