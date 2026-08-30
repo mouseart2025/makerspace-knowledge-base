@@ -2,9 +2,9 @@
 title: "全球 Fab Lab / Makerspace 案例研究"
 type: 案例
 scope: 通用
-source: "Fab Foundation/Nature/CENTRINNO等"
+source: "Fab Foundation/Nature/CENTRINNO/fab26.fabevent.org等"
 date: 2026-08
-tags: [Fab Lab, 全球案例, 南非, 荷兰, 肯尼亚, FAB25]
+tags: [Fab Lab, 全球案例, 南非, 荷兰, 肯尼亚, FAB25, FAB26, 25周年]
 ---
 
 # 全球 Fab Lab / Makerspace 案例研究
@@ -145,6 +145,53 @@ tags: [Fab Lab, 全球案例, 南非, 荷兰, 肯尼亚, FAB25]
 
 > **对知识库的启示**：FAB25 证明年会 = 毕业典礼 + 招募 + 网络粘合剂三位一体；双城模式 + 创客火车 + 家庭项目是提高大型创客活动参与广度的可复制设计。
 
+## 案例十二：FAB26 波士顿大会（2026.7.27–8.1）——25 周年回归故里
+
+> 来源：fab26.fabevent.org 官网全站抓取（2026-08）。FAB26 是 Fab Lab 网络 25 周年纪念大会，也是大会时隔 10 年世界巡游后回归诞生地波士顿。
+
+**基本盘**：
+
+| 维度 | 数据 |
+|------|------|
+| 届数 | 第 22 届 Fab Lab 大会与研讨会（22nd Fab Lab Conference & Symposium）|
+| 时间 | 2026-07-27 ~ 07-31（5 天）+ 08-01 第 6 天 |
+| 地点 | 美国剑桥/波士顿（查尔斯河两岸双城）；每日会议核心在 **MIT 校园 + Fab Hub Kendall**（Kendall Square 创新区）|
+| 主题 | **reimagine the future / reimagine the next 25**（庆祝 Fab Lab 网络 25 周年，畅想下一个 25 年）|
+| 规模 | 2^10 = **1024 参会者 / 56 个国家** / 5 天 / 1 个分布式节庆 |
+| 网络现状 | Sherry Lassiter（Fab Foundation）：Fab Lab 网络含 **2000+ 数字制造设施 / 126 国** |
+| 特殊安排 | 08-01 **Public Day + Distributed Festival**（分布式节庆遍布马萨诸塞与新英格兰地区）|
+
+**十年回归的意义**：FAB26 把全球 Fab 社区带回其诞生地——2003 年首个 Fab Lab 诞生于波士顿内城（Gershenfeld 与民权领袖 Mel King 合作的外展项目）。主办方特意选址查尔斯河两岸（MIT 与 Kendall Square），寓意"从实验室走向创新区"。
+
+**五主题日框架**（Fab 网络下一个 25 年的议程地图，可作创客空间年度活动/课程主题设计的参考框架）：
+
+| 日 | 主题 | 核心议题 |
+|----|------|----------|
+| 周一 | **Origins & Futures**（起源与未来）| 回望 CBA 起源与全球影响；个人成长、社区转型、网络未来愿景故事 |
+| 周二 | **Tools & Tech**（工具与技术）| 开源机器、AI、量子、太空技术——正在改变数字制造与社会的新工具 |
+| 周三 | **Education & Learning**（教育与学习）| 从 Academany 到 K-12：学习模式与认证体系——教育全球范式（当日含 **Academany 毕业典礼**）|
+| 周四 | **People & Planet**（人与地球）| Fab City 视角：韧性、再生、全球社会正义；社区在自身生物区域内生产、共享、维持资源 |
+| 周五 | **Systems & Scaling**（系统与规模化）| 政策/资金/标准/治理——未来 25 年生态规模化所需系统与策略 |
+| 周六 | **Public Day + Distributed Festival** | 面向公众开放 + 分布式节庆（马萨诸塞及新英格兰各 Fab 节点）|
+
+**每日结构**：Registration → Fab Conference → 下午 Hands-on Workshops；第 1 天 Welcome Reception、第 5 天 Closing Reception。
+
+**演讲者阵容**（数字制造 + 产业 + 政策 + 艺术全光谱，与中国生态关联度高）：
+
+- **起源/学术**：Neil Gershenfeld（MIT CBA 主任，"maker 运动精神之父"）、Joshua Smith（Neil 首名学生，UW 教授）、Nadya Peek（UW Machine Agency，非传统数字制造工具）、Kenny Cheung（NASA 编码结构实验室）
+- **网络/教育**：Sherry Lassiter（Fab Foundation 总裁）、Luciana Asinari（Fab Academy 全球协调员）、Liz Whitewolf（eduFAB / Fab Educators Summit，K-12 数字制造与创客空间整合）、Michael Stone（PEF，合作开发 **108 个 K-12 FabLab**）、Dr. Claudia Urrea（MIT pK-12 Initiative）、Ann Berger Valente（MIT 终身幼儿园）
+- **产业/开源硬件**：**Eric Pan（Seeed Studio CEO / 柴火创客空间创始人）**、**Jinger Zeng（Seeed Studio 社区经理，前 Hackster/Dronecode）**、**Ricky Ye（DFRobot CEO，产品覆盖 200 国、40,000+ 教师）**、Josef Prusa（Prusa Research 创始人，欧美最大桌面 3D 打印制造商）、Max Lobovsky（Formlabs CEO，Fab@Home 开源 3D 打印先驱）、Mary Lou Jepsen（OLPC/Openwater）、Gill Pratt（丰田首席科学家/TRI）、Marc Raibert（Boston Dynamics 创始人/RAI 研究所）、Dr. Ahmad Bahai（TI CTO）、Prashant Patil（Atomic Machines CTO，MIT 微制造）
+- **政策/城市/社区**：Eric Paley（马萨诸塞州经济发展部长）、Sally Kornbluth（MIT 校长）、Tomas Diez（Fab City Foundation 执行主席）、Josefina Nano（Fab City Foundation）、Nepal Asatthawasi（Mechanism，飓风后地方制造重建）、Vaibhav Chhabra（Maker's Asylum，印度首个社区创客空间）、Beno Juarez（FabLab Peru / fab.lat，亚马逊原住民再生经济）、Jean-Luc Pierite（波士顿北美印第安中心）
+- **艺术/文化**：Janet Echelman（大型流体装置艺术家）、Chris Bathgate（"studio machining"机加工雕塑）、Jason Krugman（光雕塑）、Manaswi Mishra（MIT Media Lab AI 乐器）、Char Stiles（计算艺术家/Hex House 创客空间）
+
+**FAB28 前瞻（重要情报）**：卢旺达（Rwanda Convention Bureau 的 Suzanne Uwabera）已主导竞标 **Global Fab Lab Conference 2028（FAB28）**，若成功将是该系列大会**首次走进非洲**（此前 FAB25 首次中东欧、FAB26 回归北美）。
+
+> **对知识库的启示**：
+> 1. **25 周年五主题日 = 可复制的议程框架**：起源回顾 / 工具前沿 / 教育认证 / 人地关系 / 规模化治理——创客空间做年度活动或课程体系设计时可平移这五个维度。
+> 2. **中国开源硬件厂商深度嵌入全球 Fab 网络**：Seeed（潘昊、Jinger Zeng）与 DFRobot（Ricky Ye）同时登上 FAB26 讲台，印证"中国开源硬件 = 全球 Fab 生态基础设施供应商"的定位，是知识库开源硬件选型与对外协作的重要背书。
+> 3. **Academany 毕业典礼与年会绑定**：周三毕业典礼嵌入大会——Fab Academy 的"分布式学习 + 集中式毕业"模式是创客空间教育运营的参照系（详见 `../04-运营与管理/Fab-Academy/` 系列）。
+> 4. **网络代际传承**：Gershenfeld 与首名学生 Joshua Smith 同台、Makan/Gershenfeld 家族成员（Alan Gershenfeld，E-Line Media）多代参与——Fab 网络重视"师承链"，可借鉴为社区人才培养方法。
+
 ## 附：Fab Lab 数量口径对照（引用时注意）
 
 | 口径 | 数字 | 来源 |
@@ -169,3 +216,6 @@ tags: [Fab Lab, 全球案例, 南非, 荷兰, 肯尼亚, FAB25]
 - [中国创客空间案例.md](中国创客空间案例.md)
 - [../02-空间搭建/Fab-Lab建设标准与流程.md](../02-空间搭建/Fab-Lab建设标准与流程.md)
 - [../01-创客文化与源流/Fab全球生态体系.md](../01-创客文化与源流/Fab全球生态体系.md)
+- [../04-运营与管理/Fab-Academy/Fab-Academy平台与运营机制-专题补充.md](../04-运营与管理/Fab-Academy/Fab-Academy平台与运营机制-专题补充.md)
+- [../06-资源索引/FabCity全球倡议-资源汇总.md](../06-资源索引/FabCity全球倡议-资源汇总.md)
+- [../06-资源索引/FabLab与MIT开源资源-专题补充.md](../06-资源索引/FabLab与MIT开源资源-专题补充.md)
