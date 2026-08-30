@@ -2,9 +2,9 @@
 title: "全球 Fab Lab / Makerspace 案例研究"
 type: 案例
 scope: 通用
-source: "Fab Foundation/Nature/CENTRINNO/fab26.fabevent.org等"
+source: "Fab Foundation/Nature/CENTRINNO/fab26.fabevent.org/fabhubkendall.fabfoundation.org等"
 date: 2026-08
-tags: [Fab Lab, 全球案例, 南非, 荷兰, 肯尼亚, FAB25, FAB26, 25周年]
+tags: [Fab Lab, 全球案例, 南非, 荷兰, 肯尼亚, FAB25, FAB26, 25周年, Fab Hub Kendall, Fab Foundation总部]
 ---
 
 # 全球 Fab Lab / Makerspace 案例研究
@@ -192,6 +192,49 @@ tags: [Fab Lab, 全球案例, 南非, 荷兰, 肯尼亚, FAB25, FAB26, 25周年]
 > 3. **Academany 毕业典礼与年会绑定**：周三毕业典礼嵌入大会——Fab Academy 的"分布式学习 + 集中式毕业"模式是创客空间教育运营的参照系（详见 `../04-运营与管理/Fab-Academy/` 系列）。
 > 4. **网络代际传承**：Gershenfeld 与首名学生 Joshua Smith 同台、Makan/Gershenfeld 家族成员（Alan Gershenfeld，E-Line Media）多代参与——Fab 网络重视"师承链"，可借鉴为社区人才培养方法。
 
+## 案例十三：Fab Hub Kendall——城市创新区旗舰 Fab Lab 总部（2026 夏开业）
+
+> 来源：https://fabhubkendall.fabfoundation.org/ 全站抓取（2026-08）。Fab Foundation 全球总部 + 旗舰 Fab Lab，FAB26 大会主会场之一。
+
+**基本盘**：
+
+| 维度 | 内容 |
+|------|------|
+| 位置 | **Kendall Square 315 Main St, Cambridge MA**——剑桥创新区核心 |
+| 开业 | 2026 年夏（官网另有旧文案"2025 夏"一处，以 2026 为准）|
+| 主体 | Fab Foundation 全球总部（Global HQ）+ 旗舰 Fab Lab；Fab Foundation 2009 年从 MIT CBA 分拆，美国 501(c)(3) 非营利 |
+| 合作 | **BXP**（地产）+ **Cambridge Redevelopment Authority**（剑桥再开发局）+ Kendall Square Association（牵线）|
+| 网络 | 官网口径：2,700+ Fab Labs / 165 国（About 段另有 135 国一处，口径不一）|
+
+**三大支柱（.EDU / .COM / .ORG）——使命定位框架**：
+
+| 支柱 | 含义 |
+|------|------|
+| **.EDU 教育** | 普及数字制造技术与教育，让任何学习者都能发明、创造、创新 |
+| **.COM 社区** | 支持 2,700+ Fab Labs / 165 国全球网络，培育协作、知识交换与"制造与发现"共享文化 |
+| **.ORG 社会公益** | 将数字制造导向气候行动、社会正义与长期社区韧性 |
+
+**四大旗舰项目（功能模块设计参照）**：
+
+| # | 项目 | 内容 |
+|---|------|------|
+| 01 | **数字制造设施** | 激光、大型 CNC、精密 CNC 铣床、3D 打印机、NC 切割、注塑/铸造、数字缝纫机、电子设计与生产工具 |
+| 02 | **可持续生活与制造研究中心** | 循环经济研究与实践，对接 **Fab City Global Initiative**（全球 50 城市公私合作，含波士顿地区 Somerville/Cambridge/Boston）|
+| 03 | **全球教育与创新培训中心** | STEAM 学习 + 职业发展与数字技能劳动力培训 + **Academany 组合** + 为本地创业者/领域专家/艺术家提供原型支持 |
+| 04 | **社区开放设施** | 免费公共开放时段：课后项目、社区公益项目、与本地组织合作 |
+
+**服务对象（Who we serve，覆盖极广）**：K-12 学校/学区、大学、个人教育者与学生、非正式/替代教育机构、STEM 组织、图书馆、社区中心、青少年与家庭、非营利、创业者、企业、独立企业、行业组织。
+
+**提供的价值（What we offer）**：K-12 STEM 教育、数字制造教学、可持续制造研究、循环经济研究、数字经济劳动力发展、创业支持、全球实践社区、艺术与个人表达、创新文化、社区韧性。
+
+**合作/参与入口**：HQ@fabfoundation.org——可合作方向：发展机会、内容编程、K-12 学校参与、专业原型、社区服务项目、志愿者/实习生。
+
+> **对知识库的启示**：
+> 1. **"三支柱 + 四项目"是创客空间功能架构的现成模板**：教育 / 社区 / 社会公益三支柱 + 设施 / 可持续研究 / 教育中心 / 社区开放四模块，可平移为创客空间（尤其有城市区位或科普属性的空间）的定位与功能设计框架。
+> 2. **Fab Foundation 首次拥有实体全球总部**：过去 25 年网络总部"虚拟"运作，2026 年起在创新区落地旗舰空间——总部实体化是网络进入新阶段的标志。
+> 3. **地产+公共部门+社区组织三方合作模式**：BXP（私营地产）提供空间、再开发局提供政策背书、社区组织承接运营——是城市级创客空间可复制的治理结构。
+> 4. **Fab City 本地化**：该枢纽同时是 Fab City 全球 50 城市网络的波士顿节点，把"本地生产/循环经济"研究落到实体空间。
+
 ## 附：Fab Lab 数量口径对照（引用时注意）
 
 | 口径 | 数字 | 来源 |
@@ -200,6 +243,7 @@ tags: [Fab Lab, 全球案例, 南非, 荷兰, 肯尼亚, FAB25, FAB26, 25周年]
 | Fab Foundation 宣传 | 3000+ 曾启动 / 160 国 | fabfoundation.org（2026-08）|
 | FAB25 现场报告 | ~3000 个 / 164 国 | Sherry Lassiter，2025.7 |
 | FAB26 Boston 媒体稿 | 3000+ / 150 国 | fab26.fabevent.org（2026）|
+| Fab Hub Kendall 官网 | 2,700+ 个 / 165 国（135 国一处）| fabhubkendall.fabfoundation.org（2026）|
 
 ---
 
