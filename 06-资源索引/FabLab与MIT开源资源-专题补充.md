@@ -2,9 +2,9 @@
 title: "Fab Lab / MIT 开源资源专题补充（设备与工具清单/选型）"
 type: 资源索引
 scope: 通用
-source: "Fab官方+MIT开源调研"
+source: "Fab官方+MIT开源调研+cba.mit.edu全站"
 date: 2026-08
-tags: [Fab Lab, MIT, 开源资源, CAM工具链, 清单模板]
+tags: [Fab Lab, MIT, 开源资源, CAM工具链, 清单模板, CBA]
 ---
 
 # Fab Lab / MIT 开源资源专题补充（设备与工具清单/选型）
@@ -136,11 +136,73 @@ Fab 生态的设备控制/CAM 层全部开源，由 MIT Center for Bits and Atom
 3. **《低成本入门方案.md》**：Fab-in-a-Box 开源设计发布后直接引用
 4. **下一步落库优先级**：① 设备摆放与布局规范（含 UCLA 分区）→ ② 设备维护保养规范 → ③ 设备管理系统选型（Fab Manager vs MakerMatrix vs myTurn）
 
+## 八、MIT CBA 官网资源导航（2026-08 抓取）
+
+> 来源：https://cba.mit.edu/ 全站（about / tools / classes / people / news / events / docs）。CBA = MIT 比特与原子中心，Fab Lab 网络的源头实验室，Neil Gershenfeld 任主任。
+
+**定位**：CBA 是"数字制造研究级实验室"的黄金参照——从原子到建筑的制造与测量。普通创客空间无需达到该配置，但可作为**顶配知识边界**与设备演进方向参考：了解研究级在用什么设备、做什么研究，可反推哪些技术将在 5–10 年后下沉到教育级/社区级。
+
+### 8.1 CBA 是什么
+
+- 跨学科倡议，探索**计算机科学与物理科学之间的边界**："把数据变成东西（turn data into things），把东西变成数据"
+- 2001 年由美国国家科学基金会（NSF）资助启动，创建跨学科、跨尺度（原子→建筑）的数字制造设施
+- 四条主线：管理设施 / 运行研究项目 / 指导学生 / 与赞助商合作 + 创业 + 公众科普
+
+### 8.2 研究方向（前沿技术雷达）
+
+| 方向 | 说明 |
+|------|------|
+| 量子计算 | 分子核自旋实现最早期的完整量子计算之一 |
+| 物理单向加密 | 介观光散射实现物理单向加密函数 |
+| 微流体气泡逻辑 | 用气泡做逻辑门——"比特"同时传输材料与信息 |
+| 异步逻辑自动机 | 让硬件与软件对齐的异步逻辑 |
+| 智能基础设施 | 面向能效的智能基础设施 |
+| 合成生命 | 重新编码基因组、创造合成生命 |
+| 编码折叠（coded folding）| "编程物质"——由折叠规则决定全局结构的材料 |
+| 数字材料加法组装 | 用离散"数字材料"（类乐高：有限构件+可逆连接）自组装成功能结构（官网首页四格图即数字材料受力演变示意）|
+
+### 8.3 课程体系（Fab Academy 的"母本"课程谱系）
+
+CBA 课程 = Fab Academy / Academany 的源头，多年持续迭代：
+
+| 课程 | 首开 | 最近一期 | 说明 |
+|------|------|----------|------|
+| **How to Make (almost) Anything** | 2003 | 2026 | **Fab Academy 母本**，每年一届 |
+| How to Make Something That Makes (almost) Anything | 2004 | 2024 | "制造制造机器的机器"（MTM）|
+| The Nature of Mathematical Modeling | 2005 | 2026 | 数学建模方法论 |
+| The Physics of Information Technology | 2006 | 2025 | 信息技术物理 |
+| How to Grow (almost) Anything | 2019 | 2022 | 生物制造 / 合成生物学方向 |
+| How to Design (almost) Anything | 2017 | 2017 | 设计方法论 |
+
+### 8.4 设备配置（四尺度分组，研究级顶配）
+
+CBA 工具按 **nano（纳米）/ micro（微米）/ meso（毫米–米）/ macro（米以上）** 四组，设备 24 小时开放给研究项目；另设 instrumentation / biology / computation / communication 四类能力。代表设备：
+
+| 尺度 | 代表设备 | 用途 |
+|------|----------|------|
+| **Nano**（纳米级）| Hitachi FlexSEM 1000（SEM，4nm@20kV）、Keysight 5500 SPM（原子力显微镜）、EMS 150TES 镀膜机、TPT HB05 引线键合机 | 纳米成像/元素分析/EBL 光刻/封装互连 |
+| **Micro**（微米级）| Light Conversion Pharos 15W（飞秒激光）、Oxford A 系列激光微加工、Rigaku CT Lab HX130（X 射线显微 CT，2.1 voxel 分辨率）、Zeiss LSM 500 共聚焦显微镜 | 飞秒加工/微切割/三维断层扫描/形貌与生物成像 |
+| **Meso**（毫米–米）| BOY 35 注塑机、Neoden IN6C 回流焊、xTool F2 UV / F2 Ultra / F1 Ultra / P3（UV·二极管·光纤·CO₂ 激光）、Desktop Metal Shop/Studio（金属 3D 打印）、Stratasys J55（全彩）、Formlabs Fuse 1+（SLS）/ Form 3（SLA）、Markforged Mark Two（连续纤维复材）、Prusa Pro HT90（PEEK 等高温）/ XL（5 头多材料）/ i3 MK4S、Flashforge Creator Pro 2、Sodick SL400G 线切割、Roland MDX-540（4 轴 CNC）/ SRM-20 / GS-24 刻字机、Makera Carvera（自动换刀，铣 PCB）、Mechatronika M10V 贴片机、Buehler IsoMet 1000 精密切割、Orion PA 230 点焊机、Brother SE1800 刺绣缝纫机 | 注塑/回流焊/激光切割雕刻/金属3D打印/SLS/SLA/纤维复材/高温塑料/线切割/CNC/PCB铣削/贴片/焊接/纺织 |
+| **Macro**（米以上）| DMG MORI NLX 2500 车铣复合加工中心（27.8" 车削长度，Y 轴 ±60mm）等 | 大型机加工 |
+
+> **启示**：CBA 的 **meso 尺度清单**（激光/3D 打印/CNC/线切割/贴片/回流焊/焊接）与创客空间"金标准"设备栈高度同构，仅型号为工业级；nano/micro/macro 是研究级独有，提示未来设备演进方向（如显微 CT、金属打印、纤维复材、大型机加工）。
+
+### 8.5 其他资源入口
+
+- **people**：Neil Gershenfeld（主任）、Marissa Marcoux（运营）、Dan Gilbert（工坊/实验室）、Sherry Lassiter（外联/fab labs）；现任成员含 Alfonso Parra Rubio、Camron Blackburn、Jake Read 等（多位 FAB26 演讲者）
+- **alumni 明星**：Nadya Peek（UW）、Saul Griffith（MacArthur 奖）、Max Lobovsky（Formlabs）、Manu Prakash（TED Fellow）、Jason Taylor（Facebook VP）、Ara Knaian（Project Ara）——CBA 堪称数字制造"创业黄埔军校"
+- **sponsors（资助方，反映产业兴趣方向）**：Toyota、Google、Autodesk、Nike、P&G、Cisco、Microsoft、Airbus、Spirit AeroSystems、Dassault/SolidWorks、NIH、NIST、Philips 等
+- **docs**：Papers + Theses（论文 / 学位论文库）
+- **news**：CBA 季刊 Newsletter（2007–2026 全存档）
+- **events**：FAB26/FAB25/历届 FABx 大会、Mel King Festschrift、Interspecies Internet Workshop 等
+
 ## 相关文档
 
 - [../03-设备与工具/设备清单与选型.md](../03-设备与工具/设备清单与选型.md)
 - [../06-资源索引/工具设备与摆放管理-资源汇总.md](../06-资源索引/工具设备与摆放管理-资源汇总.md)
 - [../02-空间搭建/低成本入门方案.md](../02-空间搭建/低成本入门方案.md)
+- [../01-创客文化与源流/Neil思想与数字制造革命.md](../01-创客文化与源流/Neil思想与数字制造革命.md)
+- [../05-案例研究/全球Fab-Lab案例.md](../05-案例研究/全球Fab-Lab案例.md)
 
 ---
 

@@ -162,7 +162,7 @@ tags: [知识库总览, 导航, 参与共创, CC BY 4.0]
     ├── 资源总索引.md                 ← 官方组织 / 课程 / 书籍 / 工具平台 / 本地文档 全链接
     ├── GLOSSARY检索索引.md           ← 【AI检索】术语→文档 快速导航，让 AI 从问题直达正确文档
     ├── 工具设备与摆放管理-资源汇总.md ← 设备摆放 / 工具组织 / 设备管理软件 / 维保周期 40 项外部资源
-    ├── FabLab与MIT开源资源-专题补充.md ← Fab 官方清单入口、MIT 开源 CAM 工具链、Fab Manager、Fab-in-a-Box、真实实验室清单模板
+    ├── FabLab与MIT开源资源-专题补充.md ← Fab 官方清单入口、MIT 开源 CAM 工具链、Fab Manager、Fab-in-a-Box、真实实验室清单模板、CBA 官网资源导航（研究方向/课程/四尺度设备）
     ├── FabCity全球倡议-资源汇总.md    ← Full Stack 七层框架、Fab City OS 开源全家桶、Summit/Challenge、深圳节点实操
     ├── GitHub开源资源索引-实训基地专项.md ← 【实训基地专项】60+ GitHub开源项目：全封闭CNC(Hübel)、四足机器狗(Go2 ROS2)、铝型材参数化家具、安全SOP(CODE Makerspace)、电池教学(MathWorks)、竞赛仿真(RoboMaster/VEX)
     ├── GitHub开源AI平面图生成工具调研.md  ← 【AI规划工具选型】深度调研10+开源项目：Buildify(5阶段混合管线)/Rosa Miniporto(LLM+JSON+规则校验)/LLM-Floor-plan(Rhino集成)；结论：纯生成式图像不适合画精确平面图，LLM+结构化JSON+规则引擎+确定性求解器才是靠谱方向；含对标本项目的可行路径建议
