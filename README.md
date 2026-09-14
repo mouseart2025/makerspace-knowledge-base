@@ -3,14 +3,19 @@ title: "创客空间搭建、管理与运营知识库"
 type: 入口
 scope: 通用
 source: "柴火团队整理"
-date: 2026-08
+date: 2026-09-14
 tags: [知识库总览, 导航, 参与共创, CC BY 4.0]
 ---
 
 # 创客空间搭建、管理与运营知识库
 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-green)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/mouseart2025/makerspace-knowledge-base)](https://github.com/mouseart2025/makerspace-knowledge-base/commits/main)
+![Repo size](https://img.shields.io/github/repo-size/mouseart2025/makerspace-knowledge-base)
+![自检](https://img.shields.io/badge/%E8%87%AA%E6%A3%80-pre--commit_%E5%BC%BA%E5%88%B6-blue)
+
 > 建库时间：2026-08 ｜ 建库依据：《波士顿的独立精神与全球造物宗教体系》（Fab 26 归来分享会文档）+《20周学会"制造一切"》（Fab Academy 2025 届柴火学员实战分享）提供的线索 + 全球调研
-> 适用场景：柴火创客空间空间改造、新空间搭建、运营体系设计
+> 适用场景：柴火创客空间改造、新空间搭建、运营体系设计
 
 ---
 
@@ -27,6 +32,20 @@ tags: [知识库总览, 导航, 参与共创, CC BY 4.0]
 3. **给运营者**：沉淀运营模式、社区建设、课程设计方法论，让空间建起来之后"转得起来"。
 
 **如何使用**：先用 [GLOSSARY 检索索引](06-资源索引/GLOSSARY检索索引.md)（术语 → 文档，一对一映射）定位到最相关的文档，再把它们作为上下文喂给 AI（如豆包等支持文档理解的工具），配合 [02-空间搭建/AI辅助创客空间规划-方法与工具库.md](02-空间搭建/AI辅助创客空间规划-方法与工具库.md) 中的工作流与提示词模板，即可获得结构化、带依据的规划建议。所有内容均开源，你可以直接复用、改写，也欢迎回馈改进。
+
+### 文档信息卡
+
+| 项 | 值 |
+|----|----|
+| 维护方 | 柴火创客空间 / 冯磊（Seeed Studio 深圳矽递科技 社区团队） |
+| 许可协议 | [CC BY 4.0](LICENSE)（完整法律文本，英文原文具法律效力）＋ [NOTICE](NOTICE)（版权声明、署名要求、第三方资料说明、内容边界） |
+| 当前规模 | 98 篇 markdown（正文 96 篇 / 667,716 字）、682 个表格块（列数异常 0）、frontmatter 完整 98/98、脱敏扫描覆盖面 105 个可发布文本文件（命中 0）。截至 2026-09-14，复现命令：`python3 _kbcheck.py --stats-md` |
+| 版本策略 | **滚动更新**，不使用固定版本号；每次变更登记于 [知识库覆盖度分析与补充路线图](00-知识库治理/知识库覆盖度分析与补充路线图.md) §6.1 更新日志 |
+| 最近更新 | 2026-09-14（权威口径：`git log -1 --format=%cd --date=short`） |
+| 质量门 | `python3 _kbcheck.py` 十类检查 + README 树排版检查；维护者侧 pre-commit hook 强制拦截（0 ERROR / 0 WARN 才可提交） |
+| 贡献方式 | [CONTRIBUTING.md](CONTRIBUTING.md)：查重三件事 → 文档规范 → 脱敏红线 → PR 流程 → 复核周期 |
+| 反馈渠道 | GitHub Issues（勘误 / 口径冲突 / 授权与版权 / 使用反馈） |
+| 引用方式 | 见下方 §六，或使用仓库根的 `CITATION.cff`（CFF 1.2.0） |
 
 ---
 
@@ -71,12 +90,18 @@ tags: [知识库总览, 导航, 参与共创, CC BY 4.0]
 
 ```
 创客空间知识库/
-├── README.md                        ← 本文件：总览与导航
+├── README.md                        ← 本文件：总览与导航（含徽章、文档信息卡、引用与免责声明）
+├── CONTRIBUTING.md                  ← 贡献指南：查重三件事 / 文档规范 / 脱敏红线 / PR 流程 / 复核周期
+├── LICENSE                          ← CC BY 4.0 完整法律文本（Creative Commons 官方英文原文）
+├── NOTICE                           ← 版权声明、署名要求、第三方资料说明、内容边界、联系与反馈
+├── CITATION.cff                     ← 规范引用元数据（CFF 1.2.0，供学术与工作文档引用）
+├── _kbcheck.py                      ← 全库自检脚本（纯标准库、路径无关，十类检查 + 树排版）
+├── _hooks/pre-commit                ← 提交守门 hook 的版本化副本（体检全拦 + 提交身份白名单）
 │
 ├── 00-知识库治理/
 │   ├── 知识库覆盖度分析与补充路线图.md  ← 【治理】八大维度覆盖度评估、缺口清单、三阶段补充路线图
 │   ├── 逐项补充规划-基于资源调研.md    ← 【治理】15 项缺口资源调研、落地内容、首选来源、执行顺序
-│   ├── 口径事故与返工记录.md          ← 【治理】反面案例栏目：13 条口径/版本/工具/流程/合规事故与防再发护栏
+│   ├── 口径事故与返工记录.md          ← 【治理】反面案例栏目：15 条口径/版本/工具/流程/合规事故与防再发护栏
 │   └── 公开前安全核查与历史遗留对象处置规程.md ← 【治理】private→public 强制三步核查、三层洁净模型、三条处置路径对比、Support 工单模板
 │
 ├── 01-创客文化与源流/
@@ -214,6 +239,8 @@ tags: [知识库总览, 导航, 参与共创, CC BY 4.0]
 
 创客空间的方法论没有标准答案，不同团队、不同预算、不同受众都会长出不同的解法。这个知识库目前主要由柴火团队维护，但我们希望它是一份**社区共建、持续生长的公共资产**，欢迎任何人参与。
 
+> 📘 **本节是速览。完整规范（六字段 frontmatter、命名与篇幅、表格硬规则、脱敏红线对照表、PR 流程、复核周期、不接受的内容清单）见 [CONTRIBUTING.md](CONTRIBUTING.md)，动手前请先读一遍。**
+
 **你可以这样参与：**
 
 - **补充内容**：你的空间搭建经验、设备选型实测、踩坑记录、课程设计、运营方案——只要对"规划、建设、管理"任一环节有价值，都欢迎沉淀进来。投稿请尽量保持结构化（表格优先）、注明出处或依据，并保持与现有目录一致的分类。
@@ -233,7 +260,7 @@ python3 _kbcheck.py --json     # 机器可读输出，便于接 CI
 
 退出码：`0` 全部通过 ｜ `1` 有 WARN（建议修） ｜ `2` 有 ERROR（必须修）。
 
-**装成 pre-commit hook（推荐，一次安装长期生效）**：仓库内 `_hooks/pre-commit` 是版本化副本，安装后每次 `git commit` 会自动跑一遍自检，**ERROR 与 WARN 均拒绝提交**（防止新增文档忘记登记、防止脱敏词入库），并校验**提交身份**——`user.name` / `user.email` 必须等于仓库归属账号，占位身份或他人用户名派生的 noreply 地址一律拒绝（见 [A-14](00-知识库治理/口径事故与返工记录.md)）；身份绕过需显式 `KB_ALLOW_IDENTITY=1`：
+**装成 pre-commit hook（维护者必装；外部贡献者可不装）**：仓库内 `_hooks/pre-commit` 是版本化副本，安装后每次 `git commit` 会自动跑一遍自检，**ERROR 与 WARN 均拒绝提交**（防止新增文档忘记登记、防止脱敏词入库），并校验**提交身份**——`user.name` / `user.email` 必须等于仓库归属账号，占位身份或他人用户名派生的 noreply 地址一律拒绝（见 [A-14](00-知识库治理/口径事故与返工记录.md)）；身份绕过需显式 `KB_ALLOW_IDENTITY=1`。**fork 本仓库的外部贡献者只需保证 `python3 _kbcheck.py` 退出码为 0 即可，不必安装本 hook**——身份白名单是维护者侧护栏，若误装被拦，用 `KB_ALLOW_IDENTITY=1 git commit …` 或 `rm .git/hooks/pre-commit` 卸载：
 
 ```bash
 cp _hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit   # 安装
@@ -246,4 +273,35 @@ git commit --no-verify                                                         #
 
 > 脱敏要求：本仓库为公开仓库（CC BY 4.0），提交内容不得包含真实甲方名称、本地绝对路径或个人隐私信息；项目专项内容请统一表述为"某职业院校"等中性称谓。
 
-**许可**：本知识库采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-Hans) 开源协议（详见 [LICENSE](LICENSE)），在保留署名并标明修改的前提下，可自由共享与改编（含商业用途）。
+---
+
+## 六、引用、许可与免责声明
+
+### 6.1 建议引用格式
+
+**中文（推荐）**：
+
+> 冯磊 / 柴火创客空间. 《创客空间搭建、管理与运营知识库》[DB/OL]. GitHub: mouseart2025/makerspace-knowledge-base, 2026（滚动更新，引用日期以你实际访问日为准）. https://github.com/mouseart2025/makerspace-knowledge-base
+
+**英文**：
+
+> Feng, L. / Chaihuo Makerspace. *Knowledge Base for Building, Managing and Operating Makerspaces* [DB/OL]. GitHub: mouseart2025/makerspace-knowledge-base, 2026 (rolling release). https://github.com/mouseart2025/makerspace-knowledge-base
+
+机器可读的引用元数据见仓库根 `CITATION.cff`（CFF 1.2.0）；GitHub 会在仓库页提供"Cite this repository"入口。由于本库为**滚动更新**而非固定版本出版物，引用时请务必**同时给出仓库链接与实际访问日期**，以便读者复现你所依据的内容快照。
+
+### 6.2 许可
+
+本知识库整体采用 **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-Hans)**（知识共享署名 4.0 国际许可协议）：在**保留署名、提供协议链接、标明是否修改**的前提下，可自由共享与改编，**含商业用途**。
+
+- 完整法律文本：[LICENSE](LICENSE)（Creative Commons 官方英文原文）
+- 版权声明、四项署名要求、第三方资料说明与内容边界：[NOTICE](NOTICE)
+- 贡献即表示同意以 CC BY 4.0 发布，详见 [CONTRIBUTING.md](CONTRIBUTING.md) §七
+
+### 6.3 免责声明
+
+1. **非工程意见**：本库提供规划、管理与运营层面的方法论与参考参数，不构成工程设计意见或施工图依据。
+2. **强制性要求须持证机构核定**：涉及楼板承重、电气容量、消防疏散、通风排尘、特种设备与高压安全等事项，必须由持证机构现场核定，并按项目所在地现行规范执行；本库数值仅作前期估算与沟通参考。
+3. **非法律意见**：许可、合规、合同与知识产权相关内容不构成法律意见，重大决策请咨询专业律师。
+4. **商标与机构名称**：文中出现的机构名称、标准编号、产品名称与商标仅用于事实性描述与溯源，不构成推荐、合作或背书关系。
+5. **第三方版权不变**：本库采用 CC BY 4.0 不改变任何被引用第三方资料的原有授权状态；例如柴火《创客空间搭建及运营指南》原采用 CC BY-NC-SA，其约束不因本库协议而放宽（详见 [NOTICE](NOTICE)）。
+6. **不含委托方信息**：本库为公开知识库，不收录任何委托方、合作方或个人的非公开信息；具体项目内容一律以中性称谓表述。

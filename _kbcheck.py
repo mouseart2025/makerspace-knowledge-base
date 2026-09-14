@@ -12,7 +12,8 @@
 
 退出码：0 = 全部通过；1 = 有 WARN（登记/孤岛/粒度）；2 = 有 ERROR（断链/缺 frontmatter/表格列数）
 
-九类检查：
+十类检查：
+  [E] 0 编码            —— .md 无法按 UTF-8 解码（GBK / UTF-16 / 误存二进制）；跳过内容并报错，不崩溃
   [E] 1 断链            —— 内部链接指向不存在的文件
   [W] 2 库外引用        —— 链接指向知识库之外（开源后对方点不开）
   [I] 2b 目录链接       —— 链接指向库内目录（可渲染，但 AI 检索不友好，建议指向具体文档）
@@ -22,6 +23,8 @@
   [E] 6 frontmatter     —— 缺失，或必备字段不全
   [I] 7 date 粒度       —— date 只写到月（无法做时效排序，不阻塞）
   [E] 8 脱敏            —— 命中本地词表 _local_secrets.txt（真实委托方名/本地路径等），公开前必须清
+                            覆盖面 = 「会被发布的文件集」中的**全部文本载体**（不止 .md/.py），
+                            按扩展名黑名单排除二进制；--stats-md 输出实际扫描文件数以便复核（A-15）
   [E] 9 表格列数        —— markdown 表格「表头列数 = 分隔行列数 = 每个数据行列数」不成立（渲染即错位）
 另附：README 结构导航树排版检查（一行挤了两个 .md 条目）+ 全库统计。
 
@@ -56,7 +59,20 @@ REVIEW_MONTHS_NORMAL = 24     # 方法论/理念类无强时效，2 年提示一
 # 本地脱敏词表：含真实委托方名称，必须被 .gitignore 排除。
 # 本脚本自身不写死任何敏感词，因此可安全提交到公开仓库。
 SECRETS_FILE = "_local_secrets.txt"
-SECRETS_SCAN_EXT = (".md", ".py")
+# 第 8 类脱敏扫描的覆盖面：**默认为全部可发布文本载体**，只按扩展名黑名单排除二进制。
+# 教训 A-15：此处曾写死为 (".md", ".py")，与《公开前安全核查与历史遗留对象处置规程》§三 1a
+# 声称的「会被发布的文件集」口径不符 —— NOTICE / CITATION.cff / LICENSE 这类根级合规文件
+# 恰恰是最容易被人手改、又最需要脱敏复核的载体，却被整类漏扫。
+SECRETS_BINARY_EXT = (
+    ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp", ".ico", ".tif", ".tiff",
+    ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".key", ".pages", ".numbers",
+    ".zip", ".rar", ".7z", ".gz", ".tar", ".bundle",
+    ".dwg", ".dxf", ".skp", ".stl", ".obj", ".3dm", ".step", ".stp",
+    ".mp3", ".mp4", ".mov", ".avi", ".wav",
+    ".ttf", ".otf", ".woff", ".woff2", ".eot",
+    ".ai", ".psd", ".sketch", ".fig",
+)
+SECRETS_MAX_BYTES = 2 * 1024 * 1024   # 单文件解码上限（正常文档远小于此），超过则跳过
 
 LINK_RE = re.compile(r'\]\((?!http|#|mailto:)([^)#\s]+)(#[^)]*)?\)')
 
@@ -163,26 +179,39 @@ def scan_tables(text):
 
 
 def scan_secrets(words):
-    """扫描「会被发布的文件」中的脱敏词。返回 [(相对路径, 词表序号, 首个命中行号)]。
+    """扫描「会被发布的文件集」中的脱敏词。
+
+    返回 (hits, scanned)：
+      hits    = [(相对路径, 词表序号, 首个命中行号)]
+      scanned = 实际成功解码并扫描的文件数 —— 覆盖面必须可复核（A-13 纪律），
+                否则「0 命中」无法区分「真的干净」与「根本没扫到」。
+
+    覆盖面口径：已跟踪 ∪ 未跟踪未忽略（见 publishable_files），排除二进制扩展名、
+    超过 SECRETS_MAX_BYTES 的载体、词表自身；无法按 UTF-8 解码者自然跳过。
     只报词表序号而不报词本身，避免诊断输出被转贴时二次泄漏。"""
     hits = []
-    if not words:
-        return hits
+    scanned = 0
     for r in sorted(publishable_files()):
-        if not r.endswith(SECRETS_SCAN_EXT) or os.path.basename(r) == SECRETS_FILE:
+        if os.path.basename(r) == SECRETS_FILE:
+            continue
+        if os.path.splitext(r)[1].lower() in SECRETS_BINARY_EXT:
             continue
         fp = os.path.join(BASE, r)
         if not os.path.isfile(fp):
             continue
         try:
+            if os.path.getsize(fp) > SECRETS_MAX_BYTES:
+                continue
             txt = read(fp)
         except Exception:
+            # 非法 UTF-8 / 二进制伪装成文本扩展名：不承载可检索文本，跳过
             continue
+        scanned += 1
         for i, w in enumerate(words, 1):
             if w and w in txt:
                 ln = next((k for k, l in enumerate(txt.split("\n"), 1) if w in l), 0)
                 hits.append((r, i, ln))
-    return hits
+    return hits, scanned
 
 
 def git_last_dates(files):
@@ -269,6 +298,29 @@ def read(p):
         return fh.read()
 
 
+def read_md_safe(files):
+    """批量读取 .md：遇到非 UTF-8 载体不崩溃，改为记入可报告的错误清单。
+
+    返回 (texts, bad_enc)，bad_enc = [(相对路径, 异常类型名)]。
+    动机（A-15 ②）：本脚本会在外部贡献者的机器上跑（fork / PR 场景），仓库里出现
+    GBK、UTF-16 或误存二进制的 markdown 完全可能。直接抛 UnicodeDecodeError 会让
+    使用者只看到一串 traceback、无法定位是哪个文件——**工具在不可信输入上必须给出
+    可读诊断，而不是崩在读取阶段**。BOM 一并剥掉，否则 frontmatter 正则会误判"缺失"。
+    """
+    texts, bad_enc = {}, []
+    for f in files:
+        try:
+            t = read(f)
+        except (UnicodeDecodeError, OSError, ValueError) as e:
+            bad_enc.append((rel(f), type(e).__name__))
+            texts[f] = ""
+            continue
+        if t.startswith("\ufeff"):
+            t = t[1:]
+        texts[f] = t
+    return texts, bad_enc
+
+
 def parse_frontmatter(text):
     m = re.match(r"^---\r?\n(.*?)\r?\n---", text, re.S)
     if not m:
@@ -287,7 +339,7 @@ def main():
 
     files = all_md()
     norm = {os.path.normpath(p) for p in files}
-    texts = {p: read(p) for p in files}
+    texts, bad_enc = read_md_safe(files)
 
     # ---------- 选做：复核到期检查 ----------
     if "--review-due" in args:
@@ -319,6 +371,12 @@ def main():
         return 1 if sens else 0
 
     errors, warns = [], []
+
+    # ---------- 0 文件编码 ----------
+    for f, why in bad_enc:
+        errors.append(("编码",
+                       f"{f} 无法按 UTF-8 解码（{why}）—— 本库统一 UTF-8（无 BOM），"
+                       f"请转码后重新提交；脚本已跳过其内容，不因此崩溃"))
 
     # ---------- 1/2 断链 + 库外引用 ----------
     broken, outside, dirlinks = [], [], []
@@ -399,7 +457,7 @@ def main():
 
     # ---------- 8 脱敏 ----------
     secret_words = load_secret_words()
-    secret_hits = scan_secrets(secret_words)
+    secret_hits, secret_scanned = scan_secrets(secret_words)
     for f, wi, ln in secret_hits:
         errors.append(("脱敏", f"{f} 第 {ln} 行命中 {SECRETS_FILE} 第 {wi} 项，公开前必须改写为中性表述"))
 
@@ -442,6 +500,8 @@ def main():
             [rel(k) if k.startswith(BASE) else k, v] for k, v in inbound.most_common(3)],
         "超长文档": sorted(long_docs, key=lambda x: -x[1]),
         "date只到月": len(infos),
+        "脱敏扫描覆盖面": secret_scanned,
+        "脱敏词表条数": len(secret_words),
     }
 
     if "--stats-md" in args:
@@ -457,7 +517,7 @@ def main():
         print(f"| README 未登记 | {len([w for w in warns if w[0] == 'README未登记'])} |")
         print(f"| GLOSSARY 未登记 | {len([w for w in warns if w[0] == 'GLOSSARY未登记'])} |")
         print(f"| 脱敏词表 | {'已加载 ' + str(len(secret_words)) + ' 词' if secret_words else '未配置（跳过）'} |")
-        print(f"| 脱敏命中 | {len(secret_hits)} |")
+        print(f"| 脱敏扫描覆盖面 / 命中 | {secret_scanned} 个可发布文本文件 / {len(secret_hits)} 命中 |")
         print(f"| 表格块 / 列数异常 | {table_blocks} / {table_bad_total} |")
         print(f"| frontmatter 完整 | {len(files) - len([e for e in errors if e[0] == '缺frontmatter'])}/{len(files)} |")
         print("\n| 目录 | 篇数 |\n|---|---|")

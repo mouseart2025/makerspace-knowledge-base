@@ -1,0 +1,34 @@
+# CITATION.cff — 让本知识库可被学术与工作文档规范引用
+# 说明：本库是滚动更新的结构化知识库而非固定版本出版物，
+#       故 type 取 generic（非 software），version 以「更新日期」标记快照，
+#       引用者应同时注明 repository-code 与访问日期。
+cff-version: 1.2.0
+type: generic
+message: "如果你使用了本知识库，请按下方格式引用（CC BY 4.0 署名要求详见 NOTICE）。"
+title: "创客空间搭建、管理与运营知识库"
+abstract: >-
+  面向创客空间（Fab Lab / Makerspace / Hackerspace）规划、建设与运营的中文结构化
+  知识库，覆盖创客文化源流、空间规划与工程参数、设备选型与安全规范、运营与课程
+  体系、案例研究，以及 AI 辅助规划工作流方法论。每篇文档带统一 frontmatter，配
+  术语索引（GLOSSARY）、全库自检脚本与治理 SOP，可直接作为大模型的上下文语料使用。
+license: CC-BY-4.0
+date-released: 2026-08-27
+version: "2026-09-14"
+repository-code: "https://github.com/mouseart2025/makerspace-knowledge-base"
+keywords:
+  - makerspace
+  - fablab
+  - hackerspace
+  - knowledge-base
+  - maker-education
+  - digital-fabrication
+  - ai-assisted-design
+  - workshop-management
+  - chinese
+authors:
+  - family-names: "冯"
+    given-names: "磊"
+    affiliation: "柴火创客空间 / Seeed Studio 深圳矽递科技 社区团队"
+  - name: "柴火创客空间社区团队"
+    alias: "Chaihuo Makerspace Community Team"
+    website: "https://github.com/mouseart2025/makerspace-knowledge-base"
