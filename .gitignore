@@ -19,8 +19,11 @@ _deidentify.py
 _scitech.py
 _add_frontmatter.py
 
-# 本地脱敏词表（含真实委托方名称，绝不能提交）
+# 本地专用文件（含真实委托方名称、旧提交 SHA 等敏感标识符，绝不能提交）
+# 约定：所有只在本机使用的清单/词表/草稿一律以 _local_ 前缀命名，由本规则统一排除
+_local_*
 _local_secrets.txt
+_local_orphan_shas.txt
 
 # 存档下载（脚本抓取的大文件）
 06-资源索引/存档/inv.*
