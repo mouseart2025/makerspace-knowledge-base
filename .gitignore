@@ -15,9 +15,7 @@
 *.tmp
 *.bak
 *.log
-_check_links.py
 _deidentify.py
-_linkcheck.py
 _scitech.py
 _add_frontmatter.py
 
