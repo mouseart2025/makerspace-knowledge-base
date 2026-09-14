@@ -233,7 +233,7 @@ python3 _kbcheck.py --json     # 机器可读输出，便于接 CI
 
 退出码：`0` 全部通过 ｜ `1` 有 WARN（建议修） ｜ `2` 有 ERROR（必须修）。
 
-**装成 pre-commit hook（推荐，一次安装长期生效）**：仓库内 `_hooks/pre-commit` 是版本化副本，安装后每次 `git commit` 会自动跑一遍自检，**ERROR 与 WARN 均拒绝提交**（防止新增文档忘记登记、防止脱敏词入库）：
+**装成 pre-commit hook（推荐，一次安装长期生效）**：仓库内 `_hooks/pre-commit` 是版本化副本，安装后每次 `git commit` 会自动跑一遍自检，**ERROR 与 WARN 均拒绝提交**（防止新增文档忘记登记、防止脱敏词入库），并校验**提交身份**——`user.name` / `user.email` 必须等于仓库归属账号，占位身份或他人用户名派生的 noreply 地址一律拒绝（见 [A-14](00-知识库治理/口径事故与返工记录.md)）；身份绕过需显式 `KB_ALLOW_IDENTITY=1`：
 
 ```bash
 cp _hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit   # 安装

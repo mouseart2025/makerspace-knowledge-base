@@ -25,6 +25,32 @@ set -u
 ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
 cd "$ROOT" || exit 0
 
+# ── 提交身份守门（事故 A-14）──────────────────────────────────────────────────
+# 本库提交身份唯一且必须等于仓库归属账号：占位名 / 他人用户名派生的 noreply 一律拦。
+# 绕过（不建议）：KB_ALLOW_IDENTITY=1 git commit …
+ID_NAME="mouseart2025"
+ID_MAIL="lei.feng@seeed.cc"
+ID_MAIL_NOREPLY="216626696+mouseart2025@users.noreply.github.com"
+CUR_NAME=$(git config user.name 2>/dev/null || echo "")
+CUR_MAIL=$(git config user.email 2>/dev/null || echo "")
+if [ "${KB_ALLOW_IDENTITY:-0}" != "1" ]; then
+    case "$CUR_MAIL" in
+        "$ID_MAIL"|"$ID_MAIL_NOREPLY") ;;
+        *)
+            echo "[pre-commit] ❌ 提交身份不在白名单：'$CUR_NAME <$CUR_MAIL>'" >&2
+            echo "             本库要求：$ID_NAME <$ID_MAIL>" >&2
+            echo "             修法：git config user.name '$ID_NAME' && git config user.email '$ID_MAIL'" >&2
+            echo "             占位身份会把提交挂到 GitHub 上的陌生同名账号名下（A-14）。" >&2
+            exit 1
+            ;;
+    esac
+    if [ "$CUR_NAME" != "$ID_NAME" ]; then
+        echo "[pre-commit] ❌ user.name='$CUR_NAME' ≠ '$ID_NAME'：作者名必须唯一（A-14）。" >&2
+        exit 1
+    fi
+fi
+
+
 if [ ! -f "_kbcheck.py" ]; then
     echo "[pre-commit] 找不到 _kbcheck.py，跳过自检。" >&2
     exit 0
