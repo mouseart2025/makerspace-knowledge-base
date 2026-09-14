@@ -75,7 +75,8 @@ tags: [知识库总览, 导航, 参与共创, CC BY 4.0]
 │
 ├── 00-知识库治理/
 │   ├── 知识库覆盖度分析与补充路线图.md  ← 【治理】八大维度覆盖度评估、缺口清单、三阶段补充路线图
-│   └── 逐项补充规划-基于资源调研.md    ← 【治理】15 项缺口资源调研、落地内容、首选来源、执行顺序
+│   ├── 逐项补充规划-基于资源调研.md    ← 【治理】15 项缺口资源调研、落地内容、首选来源、执行顺序
+│   └── 口径事故与返工记录.md          ← 【治理】反面案例栏目：11 条口径/版本/工具/流程/合规事故与防再发护栏
 │
 ├── 01-创客文化与源流/
 │   ├── 创客运动全球源流.md            ← MIT 黑客传统 → Fab Lab → Maker Faire → 中国创客运动
@@ -229,7 +230,18 @@ python3 _kbcheck.py --stats-md # 输出可直接粘进治理文档的 markdown �
 python3 _kbcheck.py --json     # 机器可读输出，便于接 CI
 ```
 
-退出码：`0` 全部通过 ｜ `1` 有 WARN（建议修） ｜ `2` 有 ERROR（必须修）。**新增文档后请务必跑一次**，并确保：① 在下方 §二 结构导航树登记；② 在 [GLOSSARY 检索索引](06-资源索引/GLOSSARY检索索引.md) 补一条"术语 → 文档"；③ 补齐六字段 frontmatter（`title` / `type` / `scope` / `source` / `date` / `tags`）。
+退出码：`0` 全部通过 ｜ `1` 有 WARN（建议修） ｜ `2` 有 ERROR（必须修）。
+
+**装成 pre-commit hook（推荐，一次安装长期生效）**：仓库内 `_hooks/pre-commit` 是版本化副本，安装后每次 `git commit` 会自动跑一遍自检，**ERROR 与 WARN 均拒绝提交**（防止新增文档忘记登记、防止脱敏词入库）：
+
+```bash
+cp _hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit   # 安装
+rm .git/hooks/pre-commit                                                       # 卸载
+KBCHECK_ALLOW_WARN=1 git commit -m "…"                                         # 仅本次放行 WARN（ERROR 仍拦）
+git commit --no-verify                                                         # 完全绕过（不建议）
+```
+
+> `.git/hooks/` 不随仓库分发，**每台机器都要各自安装一次**；副本放在 `_hooks/` 是为了让 hook 本身也可被版本管理与评审。脱敏检查依赖仓库根的 `_local_secrets.txt`（已被 `.gitignore` 排除），该文件缺失时脱敏检查会优雅跳过——公开推送前请确认它存在。**新增文档后请务必跑一次**，并确保：① 在下方 §二 结构导航树登记；② 在 [GLOSSARY 检索索引](06-资源索引/GLOSSARY检索索引.md) 补一条"术语 → 文档"；③ 补齐六字段 frontmatter（`title` / `type` / `scope` / `source` / `date` / `tags`）。
 
 > 脱敏要求：本仓库为公开仓库（CC BY 4.0），提交内容不得包含真实甲方名称、本地绝对路径或个人隐私信息；项目专项内容请统一表述为"某职业院校"等中性称谓。
 

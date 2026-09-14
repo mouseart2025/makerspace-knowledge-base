@@ -1,0 +1,69 @@
+#!/bin/sh
+# ─────────────────────────────────────────────────────────────────────────────
+# 创客空间知识库 · 提交前守门 hook（版本化副本，仓库内路径：_hooks/pre-commit）
+#
+# 作用：提交前自动跑 _kbcheck.py，拦截
+#   - ERROR（退出码 2）：断链 / 缺 frontmatter / 脱敏命中 —— 一律拒绝提交
+#   - WARN （退出码 1）：未登记 README/GLOSSARY / 孤岛 / 库外引用 / 树排版 —— 默认也拒绝
+#
+# 安装（在仓库根目录执行一次）：
+#   cp _hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+# 卸载：
+#   rm .git/hooks/pre-commit
+# 单次绕过（不建议；绕过等于把 A-10/A-11 类事故重新打开）：
+#   git commit --no-verify
+# 只想放行 WARN、仍拦 ERROR：
+#   KBCHECK_ALLOW_WARN=1 git commit -m "..."
+#
+# 背景：本 hook 由《00-知识库治理/口径事故与返工记录.md》A-10、A-11 两条事故催生。
+# 依赖：python3（系统自带即可）；_kbcheck.py 纯标准库、路径无关。
+# 注意：脱敏检查依赖仓库根的 _local_secrets.txt（已被 .gitignore 排除）。
+#       该文件缺失时脱敏检查会优雅跳过 —— 公开推送前请确认它存在。
+# ─────────────────────────────────────────────────────────────────────────────
+set -u
+
+ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+cd "$ROOT" || exit 0
+
+if [ ! -f "_kbcheck.py" ]; then
+    echo "[pre-commit] 找不到 _kbcheck.py，跳过自检。" >&2
+    exit 0
+fi
+
+PY=""
+for c in python3 python; do
+    if command -v "$c" >/dev/null 2>&1; then PY="$c"; break; fi
+done
+if [ -z "$PY" ]; then
+    echo "[pre-commit] ⚠️ 未找到 python3/python，无法自检 —— 本次放行，请手动跑一次 _kbcheck.py。" >&2
+    exit 0
+fi
+
+echo "[pre-commit] 运行知识库自检 _kbcheck.py …"
+OUT=$("$PY" _kbcheck.py 2>&1)
+CODE=$?
+
+if [ "$CODE" -eq 0 ]; then
+    echo "[pre-commit] ✅ 自检通过（0 ERROR / 0 WARN）。"
+    exit 0
+fi
+
+echo "$OUT" | sed -n '/=== ERROR/,/=== INFO/p' | sed '$d'
+echo "$OUT" | grep -E '^(结论|共 )' 
+
+if [ "$CODE" -ge 2 ]; then
+    echo "" >&2
+    echo "[pre-commit] ❌ 有 ERROR，拒绝提交。修完再提交；确需绕过用 git commit --no-verify。" >&2
+    exit 1
+fi
+
+if [ "${KBCHECK_ALLOW_WARN:-0}" = "1" ]; then
+    echo "" >&2
+    echo "[pre-commit] ⚠️ 有 WARN，但 KBCHECK_ALLOW_WARN=1，本次放行。请尽快补齐登记。" >&2
+    exit 0
+fi
+
+echo "" >&2
+echo "[pre-commit] ⚠️ 有 WARN（多为新增文档未在 README/GLOSSARY 登记，或成为孤岛），拒绝提交。" >&2
+echo "             补齐登记后重试；若确需先提交再补，用 KBCHECK_ALLOW_WARN=1 git commit …" >&2
+exit 1
