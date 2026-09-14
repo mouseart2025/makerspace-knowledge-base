@@ -10,9 +10,9 @@
     python3 _kbcheck.py --quiet      # 只在有问题时输出
     python3 _kbcheck.py --review-due # 按 §6.3 复核清单 + git 历史，列出到期该复核的文档
 
-退出码：0 = 全部通过；1 = 有 WARN（登记/孤岛/粒度）；2 = 有 ERROR（断链/缺 frontmatter）
+退出码：0 = 全部通过；1 = 有 WARN（登记/孤岛/粒度）；2 = 有 ERROR（断链/缺 frontmatter/表格列数）
 
-七类检查：
+九类检查：
   [E] 1 断链            —— 内部链接指向不存在的文件
   [W] 2 库外引用        —— 链接指向知识库之外（开源后对方点不开）
   [I] 2b 目录链接       —— 链接指向库内目录（可渲染，但 AI 检索不友好，建议指向具体文档）
@@ -22,7 +22,12 @@
   [E] 6 frontmatter     —— 缺失，或必备字段不全
   [I] 7 date 粒度       —— date 只写到月（无法做时效排序，不阻塞）
   [E] 8 脱敏            —— 命中本地词表 _local_secrets.txt（真实委托方名/本地路径等），公开前必须清
+  [E] 9 表格列数        —— markdown 表格「表头列数 = 分隔行列数 = 每个数据行列数」不成立（渲染即错位）
 另附：README 结构导航树排版检查（一行挤了两个 .md 条目）+ 全库统计。
+
+第 9 类实现要点（两条都是踩过坑的）：
+  · 单元格内的转义竖线 `\|` 不算列分隔符，否则会把正确表格误报为超列；
+  · 代码围栏（``` / ~~~）内的行一律跳过，否则示例代码里的竖线会被当成表格。
 选附：--review-due 复核到期检查——时效敏感清单直接从治理文档 §6.3 的表格解析（不硬编码，
       清单改了脚本自动跟随），文档年龄取自 git 最后一次提交日，无 git 时优雅跳过。
 
@@ -111,6 +116,50 @@ def publishable_files():
             if n not in ignored:
                 out.add(r)
     return out
+
+
+# 单元格内的转义竖线（\|）不是列分隔符
+CELL_SPLIT_RE = re.compile(r"(?<!\\)\|")   # 未转义的竖线才是列分隔符
+FENCE_RE = re.compile(r"^\s*(```|~~~)")
+
+
+def table_ncols(line):
+    """按未转义竖线切分，返回该行的列数；首尾空段（行以 | 开头/结尾）不计。"""
+    parts = CELL_SPLIT_RE.split(line.strip())
+    if parts and parts[0].strip() == "":
+        parts = parts[1:]
+    if parts and parts[-1].strip() == "":
+        parts = parts[:-1]
+    return len(parts)
+
+
+def scan_tables(text):
+    """扫全文 markdown 表格，返回 (表格块数, [(起始行, 结束行, {列数: 行数})])。
+
+    跳过代码围栏内的行；只统计「以 | 开头且至少 2 列」的连续行块，块内少于 2 行的不算表格。
+    """
+    def close(cur, blocks, bad):
+        if len(cur) > 1:
+            blocks += 1
+            cnt = collections.Counter(n for _, n in cur)
+            if len(cnt) > 1:
+                bad.append((cur[0][0], cur[-1][0], dict(sorted(cnt.items()))))
+        return blocks, []
+
+    blocks, bad, cur = 0, [], []
+    in_code = False
+    for i, line in enumerate(text.split("\n"), 1):
+        if FENCE_RE.match(line):
+            in_code = not in_code
+            blocks, cur = close(cur, blocks, bad)
+            continue
+        st = line.strip()
+        if not in_code and st.startswith("|") and table_ncols(st) >= 2:
+            cur.append((i, table_ncols(st)))
+        else:
+            blocks, cur = close(cur, blocks, bad)
+    close(cur, blocks, bad)
+    return blocks, bad
 
 
 def scan_secrets(words):
@@ -354,6 +403,19 @@ def main():
     for f, wi, ln in secret_hits:
         errors.append(("脱敏", f"{f} 第 {ln} 行命中 {SECRETS_FILE} 第 {wi} 项，公开前必须改写为中性表述"))
 
+    # ---------- 9 表格列数一致性 ----------
+    table_blocks = 0
+    table_bad = []
+    for p in files:
+        n, bad = scan_tables(texts[p])
+        table_blocks += n
+        for l0, l1, cnt in bad:
+            cols = "、".join(f"{k} 列×{v} 行" for k, v in cnt.items())
+            errors.append(("表格列数",
+                           f"{rel(p)} 第 {l0}-{l1} 行表格列数不一致（{cols}）——"
+                           f"权威口径：表头 = 分隔行 = 每个数据行；缺列的多为漏写单元格"))
+    table_bad_total = len([e for e in errors if e[0] == "表格列数"])
+
     # ---------- README 结构导航树排版 ----------
     tree_bad = []
     for i, line in enumerate(readme_text.split("\n"), 1):
@@ -396,6 +458,7 @@ def main():
         print(f"| GLOSSARY 未登记 | {len([w for w in warns if w[0] == 'GLOSSARY未登记'])} |")
         print(f"| 脱敏词表 | {'已加载 ' + str(len(secret_words)) + ' 词' if secret_words else '未配置（跳过）'} |")
         print(f"| 脱敏命中 | {len(secret_hits)} |")
+        print(f"| 表格块 / 列数异常 | {table_blocks} / {table_bad_total} |")
         print(f"| frontmatter 完整 | {len(files) - len([e for e in errors if e[0] == '缺frontmatter'])}/{len(files)} |")
         print("\n| 目录 | 篇数 |\n|---|---|")
         for k, v in stats["逐目录"].items():
@@ -435,7 +498,7 @@ def main():
     for kind, msg in warns:
         grouped[kind].append(msg)
     for kind in ["README未登记", "GLOSSARY未登记", "孤岛文档", "README树排版",
-                 "库外引用", "frontmatter字段不全"]:
+                 "库外引用", "frontmatter字段不全", "表格列数"]:
         if kind not in grouped:
             continue
         msgs = grouped.pop(kind)
