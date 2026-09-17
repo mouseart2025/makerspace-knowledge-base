@@ -19,6 +19,10 @@ _deidentify.py
 _scitech.py
 _add_frontmatter.py
 
+# Python（仓库内有 _kbcheck.py，运行/编译会产生缓存目录）
+__pycache__/
+*.py[cod]
+
 # 本地专用文件（含真实委托方名称、旧提交 SHA 等敏感标识符，绝不能提交）
 # 约定：所有只在本机使用的清单/词表/草稿一律以 _local_ 前缀命名，由本规则统一排除
 _local_*

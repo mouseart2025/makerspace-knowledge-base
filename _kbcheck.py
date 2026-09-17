@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
+r"""
 知识库自检工具（合并原 _linkcheck.py + _check_links.py，并扩展为「守门」检查）
 
 用法：

@@ -1,9 +1,10 @@
 # CITATION.cff — 让本知识库可被学术与工作文档规范引用
-# 说明：本库是滚动更新的结构化知识库而非固定版本出版物，
-#       故 type 取 generic（非 software），version 以「更新日期」标记快照，
-#       引用者应同时注明 repository-code 与访问日期。
+# 说明：本库是滚动更新的结构化知识库而非固定版本出版物。
+#       CFF 1.2.0 的 type 只允许 dataset / software 两个取值（无 generic），
+#       本库取 dataset（结构化资料集）；本库不含可执行程序，故不取 software。
+#       version 以「更新日期」标记快照，引用者应同时注明 repository-code 与访问日期。
 cff-version: 1.2.0
-type: generic
+type: dataset
 message: "如果你使用了本知识库，请按下方格式引用（CC BY 4.0 署名要求详见 NOTICE）。"
 title: "创客空间搭建、管理与运营知识库"
 abstract: >-
