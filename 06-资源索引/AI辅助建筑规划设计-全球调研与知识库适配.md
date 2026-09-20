@@ -1,6 +1,6 @@
 ---
 title: "AI 辅助建筑规划设计：全球调研与知识库适配"
-type: 调研
+type: 资源
 scope: 通用
 source: "全球检索（RIBA/AIA/Autodesk/Chaos&Architizer/Parametric Architecture/PAACADEMY/小库/上海院/arXiv 等）"
 date: 2026-08

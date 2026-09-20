@@ -39,10 +39,10 @@ tags: [知识库总览, 导航, 参与共创, CC BY 4.0]
 |----|----|
 | 维护方 | 柴火创客空间 / 冯磊（Seeed Studio 深圳矽递科技 社区团队） |
 | 许可协议 | [CC BY 4.0](LICENSE)（完整法律文本，英文原文具法律效力）＋ [NOTICE](NOTICE)（版权声明、署名要求、第三方资料说明、内容边界） |
-| 当前规模 | 117 篇 markdown（正文 115 篇 / 976,628 字）、933 个表格块（列数异常 0）、frontmatter 完整 117/117、脱敏扫描覆盖面 124 个可发布文本文件（命中 0，词表已含中文与罗马化两组写法）。截至 2026-09-20，复现命令：`python3 _kbcheck.py --stats-md` |
+| 当前规模 | 117 篇 markdown（正文 115 篇 / 979,949 字）、933 个表格块（列数异常 0）、frontmatter 完整 117/117、脱敏扫描覆盖面 124 个可发布文本文件（命中 0，词表已含中文与罗马化两组写法）。截至 2026-09-20，复现命令：`python3 _kbcheck.py --stats-md` |
 | 版本策略 | **滚动更新**，不使用固定版本号；每次变更登记于 [知识库覆盖度分析与补充路线图](00-知识库治理/知识库覆盖度分析与补充路线图.md) §6.1 更新日志 |
 | 最近更新 | 2026-09-20（权威口径：`git log -1 --format=%cd --date=short`） |
-| 质量门 | `python3 _kbcheck.py` 十类检查 + README 树排版检查；维护者侧 pre-commit hook 强制拦截（0 ERROR / 0 WARN 才可提交） |
+| 质量门 | `python3 _kbcheck.py` 十类检查（含 `type` / `scope` 受控词表越界拦截）+ README 树排版检查；维护者侧 pre-commit hook 强制拦截（0 ERROR / 0 WARN 才可提交） |
 | 贡献方式 | [CONTRIBUTING.md](CONTRIBUTING.md)：查重三件事 → 文档规范 → 脱敏红线 → PR 流程 → 复核周期 |
 | 反馈渠道 | GitHub Issues（勘误 / 口径冲突 / 授权与版权 / 使用反馈） |
 | 引用方式 | 见下方 §六，或使用仓库根的 `CITATION.cff`（CFF 1.2.0） |

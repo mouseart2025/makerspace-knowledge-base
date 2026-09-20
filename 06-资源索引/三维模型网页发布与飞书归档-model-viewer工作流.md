@@ -1,6 +1,6 @@
 ---
 title: "三维模型网页发布与分享工作流：Blender → GLB → model-viewer 单文件网页 / 飞书文档归档"
-type: 资源索引
+type: 索引
 scope: 通用
 source: "柴火团队实战复盘（2026-09，Blender 5.2 + @google/model-viewer 3.5 + 飞书云文档）"
 date: 2026-09-18

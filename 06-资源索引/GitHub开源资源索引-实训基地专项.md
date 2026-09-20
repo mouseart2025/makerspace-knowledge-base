@@ -1,6 +1,6 @@
 ---
 title: "GitHub开源资源索引（本项目专项）"
-type: 资源索引
+type: 索引
 scope: 本项目专项
 source: "GitHub开源项目调研"
 date: 2026-08

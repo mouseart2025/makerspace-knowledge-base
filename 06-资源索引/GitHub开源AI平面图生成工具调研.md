@@ -1,6 +1,6 @@
 ---
 title: "GitHub开源AI平面图生成工具调研"
-type: 资源索引
+type: 索引
 scope: 通用
 source: "GitHub AI平面图工具调研"
 date: 2026-08

@@ -1,6 +1,6 @@
 ---
 title: "AI 辅助动线规划：方法、工具与开源资源调研"
-type: 调研
+type: 资源
 scope: 通用
 source: "GitHub/arXiv/Sage/UCL Space Syntax/OpenReview 等全球检索"
 date: 2026-09-20

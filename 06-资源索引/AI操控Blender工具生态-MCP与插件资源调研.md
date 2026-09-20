@@ -1,6 +1,6 @@
 ---
 title: "AI 操控 Blender 工具生态：MCP 协议、AI 插件与资源站点调研"
-type: 资源索引
+type: 索引
 scope: 通用
 source: "GitHub 开源社区调研 + 各工具官网文档"
 date: 2026-09-18

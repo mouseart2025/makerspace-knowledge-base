@@ -1,6 +1,6 @@
 ---
 title: "实训设备 Benchmark 数据库与供应商名录"
-type: 资源索引
+type: 索引
 scope: 通用
 source: "真实政府采购中标公示+院校公开招标+行业渠道"
 date: 2026-08-30

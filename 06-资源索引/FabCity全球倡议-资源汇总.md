@@ -1,6 +1,6 @@
 ---
 title: "Fab City 全球倡议资源汇总（专题补充）"
-type: 资源索引
+type: 索引
 scope: 通用
 source: "Fab City官网调研"
 date: 2026-08

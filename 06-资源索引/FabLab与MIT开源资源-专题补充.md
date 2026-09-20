@@ -1,6 +1,6 @@
 ---
 title: "Fab Lab / MIT 开源资源专题补充（设备与工具清单/选型）"
-type: 资源索引
+type: 索引
 scope: 通用
 source: "Fab官方+MIT开源调研+cba.mit.edu全站"
 date: 2026-08

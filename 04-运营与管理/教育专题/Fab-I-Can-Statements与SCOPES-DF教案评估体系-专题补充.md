@@ -1,6 +1,6 @@
 ---
 title: "Fab I Can Statements 与 SCOPES-DF 教案评估体系-专题补充"
-type: 教育专题
+type: 专题补充
 scope: 通用
 source: "fabfoundation.org + scopesdf.org 全站抓取"
 date: 2026-08

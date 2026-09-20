@@ -1,6 +1,6 @@
 ---
 title: "带盖桌面CNC选型与摆放规范"
-type: 专项方案
+type: 方案
 scope: 本项目专项
 source: "调研+项目经验"
 date: 2026-08

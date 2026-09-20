@@ -20,7 +20,7 @@ r"""
   [W] 3 孤岛文档        —— 没有任何其他文档链向它
   [W] 4 README 未登记   —— 文件名未出现在 README.md（含结构导航树）
   [W] 5 GLOSSARY 未登记 —— 未被 GLOSSARY检索索引.md 以链接形式收录
-  [E] 6 frontmatter     —— 缺失，或必备字段不全
+  [E] 6 frontmatter     —— 缺失，或必备字段不全；type / scope 取值必须落在受控词表内（TYPE_VOCAB / SCOPE_VOCAB）
   [I] 7 date 粒度       —— date 只写到月（无法做时效排序，不阻塞）
   [E] 8 脱敏            —— 命中本地词表 _local_secrets.txt（真实委托方名/本地路径等），公开前必须清
                             覆盖面 = 「会被发布的文件集」中的**全部文本载体**（不止 .md/.py），
@@ -52,6 +52,10 @@ README_EXEMPT = {README}
 # GLOSSARY 需要被 README 登记（否则它就是孤岛），但它自己不收录导航根
 GLOSSARY_EXEMPT = {README, GLOSSARY}
 REQUIRED_FIELDS = ["title", "type", "scope", "source", "date", "tags"]
+# type 的受控词表（与 CONTRIBUTING.md §2.1 保持一致）。
+# 教训：此前规范只写 7 类、脚本只验证「字段存在」，实际长出 13 类且无人察觉 —— 规范形同虚设。
+TYPE_VOCAB = ["入口", "治理", "方法论", "规范", "方案", "案例", "资源", "索引", "专题补充"]
+SCOPE_VOCAB = ["通用", "本项目专项"]
 LONG_DOC_THRESHOLD = 30000  # 字，超过则提示考虑拆分
 GOVERNANCE = "00-知识库治理/知识库覆盖度分析与补充路线图.md"
 REVIEW_MONTHS_SENSITIVE = 6   # §6.3：时效敏感内容每 6 个月核验
@@ -448,6 +452,14 @@ def main():
         missing = [k for k in REQUIRED_FIELDS if k not in fm or not fm[k]]
         if missing:
             errors.append(("frontmatter字段不全", f"{rel(p)} 缺 {', '.join(missing)}"))
+        # type 取值必须落在受控词表内（ERROR 级，与「字段不全」同级）
+        tv = str(fm.get("type", "")).strip()
+        if tv and tv not in TYPE_VOCAB:
+            errors.append(("type越界", f"{rel(p)} type={tv} 不在受控词表内（{ ' / '.join(TYPE_VOCAB) }）"))
+        # scope 取值同样受控（ERROR 级）
+        sv = str(fm.get("scope", "")).strip()
+        if sv and sv not in SCOPE_VOCAB:
+            errors.append(("scope越界", f"{rel(p)} scope={sv} 不在受控词表内（{ ' / '.join(SCOPE_VOCAB) }）"))
         dv = str(fm.get("date", ""))
         if re.fullmatch(r"\d{4}-\d{2}", dv):
             coarse_date.append((rel(p), dv))
@@ -558,7 +570,7 @@ def main():
     for kind, msg in warns:
         grouped[kind].append(msg)
     for kind in ["README未登记", "GLOSSARY未登记", "孤岛文档", "README树排版",
-                 "库外引用", "frontmatter字段不全", "表格列数"]:
+                 "库外引用", "frontmatter字段不全", "type越界", "scope越界", "表格列数"]:
         if kind not in grouped:
             continue
         msgs = grouped.pop(kind)

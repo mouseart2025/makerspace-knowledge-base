@@ -1,6 +1,6 @@
 ---
 title: "GLOSSARY 检索索引"
-type: 资源索引
+type: 索引
 scope: 通用
 source: "知识库全库盘点"
 date: 2026-08-30
