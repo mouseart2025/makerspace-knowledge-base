@@ -175,6 +175,7 @@ tags: [术语索引, AI检索, 快速导航, 术语→文档]
 | 设备价格基准、供应商名录、采购渠道 | [Benchmark数据库与供应商名录.md](../06-资源索引/Benchmark数据库与供应商名录.md) |
 | Blender AI 操控工具生态：MCP 协议、AI 插件、Dream-Textures、资产生成工具、选型对比 | [AI操控Blender工具生态-MCP与插件资源调研.md](../06-资源索引/AI操控Blender工具生态-MCP与插件资源调研.md) |
 | 模型网页分享、GLB/glTF 导出、model-viewer、单文件 HTML、3D 热点、AR、飞书文档模型归档 | [三维模型网页发布与飞书归档-model-viewer工作流.md](../06-资源索引/三维模型网页发布与飞书归档-model-viewer工作流.md) |
+| 免费 3D 素材源、CC0 库、CC-BY 署名、Poly Haven、Kenney、Quaternius、Poly Pizza、OpenMarketBase、ToxSam 开源 3D 资产、BlenderKit、3D Warehouse、工程 CAD 库（GrabCAD/TraceParts/3D ContentCentral/McMaster-Carr/Misumi）、3D 数据集（Objaverse/HSSD/3D-FRONT/ABO）、★ **HSSD 禁商用 CC BY-NC**、Objaverse CC0 子集、`polydown` 批量下载、素材授权台账、通用物 vs 专业设备 | [免费3D素材源清单-开源库与授权判据.md](../06-资源索引/免费3D素材源清单-开源库与授权判据.md) |
 | 动线分类、访客动线分离、迂回系数、交叉次数、折返次数、动线布局模式（直线/环形/放射/网格/鱼骨）、人体工效常量、约束分层、栅格模拟、外部知识包核查、GB 55037-2022 建筑防火通用规范、GB/T 10000-2023 中国成年人人体尺寸、GB 55019-2021 无障碍通用规范、GB 50763 轮椅回转空间、ezdxf、agent skill 包（pascal-3d / furniture-fit / text-to-cad） | [空间动线与摆放规划-外部知识包核查与开源工具适配.md](../06-资源索引/空间动线与摆放规划-外部知识包核查与开源工具适配.md) |
 | ★ **查技能/插件的检索方法**：推荐市场（BuiltinMarket）用**英文技术专名**而非中文职能词——`dxf` / `autocad` / `dwg` 命中率极高，「空间/布局/3D 建筑」类中文词会退回 UI 排版与磁盘清理；专业软件类技能「是否依赖 AutoCAD COM」是可移植性一刀切判据 | [空间动线与摆放规划-外部知识包核查与开源工具适配.md](../06-资源索引/空间动线与摆放规划-外部知识包核查与开源工具适配.md)（§7.4） |
 | DWG 离线读取（图层清单/文字/表格还原）、无头浏览器视觉校验（HTML/SVG 出图截图复核）、按身体尺寸反推家具参数、建设造价询价与材料规格完整性审查 | [空间动线与摆放规划-外部知识包核查与开源工具适配.md](../06-资源索引/空间动线与摆放规划-外部知识包核查与开源工具适配.md)（§7.4 A 档 4 项） |
