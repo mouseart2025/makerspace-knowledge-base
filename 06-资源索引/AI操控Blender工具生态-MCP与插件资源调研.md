@@ -3,7 +3,7 @@ title: "AI 操控 Blender 工具生态：MCP 协议、AI 插件与资源站点�
 type: 索引
 scope: 通用
 source: "GitHub 开源社区调研 + 各工具官网文档"
-date: 2026-09-18
+date: 2026-10-15
 tags: [Blender, MCP, AI Agent, 3D建模, 材质生成, 资源索引, AI工具]
 ---
 
@@ -177,6 +177,8 @@ MCP 模式允许 AI 执行任意 Python 脚本，以下风险需要知晓：
 - [AI辅助创客空间规划-方法与工具库.md](../02-空间搭建/AI辅助创客空间规划-方法与工具库.md)——AI 空间规划七步工作流与提示词模板
 - [SketchUp自动化与AI设备自动摆放-工作方法与踩坑记录.md](SketchUp自动化与AI设备自动摆放-工作方法与踩坑记录.md)——SketchUp 路线的自动化方案与踩坑记录，可与本文 Blender 路线二选一或互补使用
 - [开源软件工具链清单.md](../03-设备与工具/开源软件工具链清单.md)——Blender 本体作为开源软件在创客空间教学中的应用
+- [AI辅助PCB设计与EDA-开源资源与技能包核查.md](AI辅助PCB设计与EDA-开源资源与技能包核查.md)——同形态对照：AI 经 MCP / 技能操控 **EDA** 的生态（PCB 侧）
+- [AI辅助机械结构设计与参数化CAD-工具生态与可用性核查.md](AI辅助机械结构设计与参数化CAD-工具生态与可用性核查.md)——同形态对照：AI 经 MCP / 技能操控 **CAD** 的生态（结构侧）
 
 ---
 
@@ -185,3 +187,4 @@ MCP 模式允许 AI 执行任意 Python 脚本，以下风险需要知晓：
 | 版本 | 日期 | 变更内容 |
 |------|------|---------|
 | v1.0 | 2026-09-18 | 首次成文。收录 blender-mcp 系列、Rogue-AI-Assistant、Blender-Copilot、BlenderGPT、Dream-Textures、Rapid-Assets AI 等工具，配套选型建议与安全提醒 |
+| v1.1 | 2026-10-15 | 延伸阅读补两篇「同形态对照」（PCB/EDA 侧、机械结构 CAD 侧） |
